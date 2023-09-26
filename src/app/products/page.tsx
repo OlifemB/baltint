@@ -3,6 +3,7 @@
 import React from 'react';
 import {data, IProductsPageData} from './data'
 import Image from "next/image";
+import ImageGallery from "react-image-gallery";
 import {useAppSelector} from "@/redux/store";
 
 const ProductsPage = () => {
@@ -51,13 +52,46 @@ const ProductsPage = () => {
                             {pageData.sections[1].btn2.title}
                         </button>
                     </div>
-                    {/*<div className={'galley'}>*/}
-                    {/*    {pageData.section1.gallery.map((item, index) =>*/}
-                    {/*        <div key={item.title + item.alt + index}>*/}
-                    {/*            {item.title}*/}
-                    {/*        </div>*/}
-                    {/*    )}*/}
-                    {/*</div>*/}
+                    {/*<ImageGallery items={[]} />*/}
+                </div>
+
+                <div className={'flex flex-col items-start justify-start gap-0 container mx-auto py-10'}>
+                    <h2 className={'text-1xl font-bold'}>
+                        {pageData.sections[2].title}
+                    </h2>
+                    <ul>
+                        {pageData.sections[2].list.map(item => <li>{item.title}</li>)}
+                    </ul>
+                </div>
+
+                <div className={'flex flex-col items-start justify-start gap-0 container mx-auto py-10'}>
+                    <h2 className={'text-1xl font-bold'}>
+                        Служба технической поддержки:
+                    </h2>
+                    <ul>
+                        <li>Время работы службы технической поддержки: Понедельник – пятница с 09.00 – 17.30</li>
+                        <li>Почтовый адрес для направления запросов: 191028, Санкт-Петербург, пр-кт Литейный, д. 26,
+                            литера А
+                        </li>
+                        <li>Телефон:</li>
+                        <li>Email:</li>
+                        <li>Служба технической поддержки поможет в обновлении продукта, помогут устранить сбои при
+                            использовании Продукта
+                        </li>
+
+
+                    </ul>
+                </div>
+
+                <div className={'flex flex-col items-start justify-start gap-0 container mx-auto py-10'}>
+                    <h2 className={'text-1xl font-bold'}>
+                        Стоимость продукта рассчитывается индивидуально (Связаться с нами/активная ссылка)
+                    </h2>
+                    <p>Цена на продукт определяется в зависимости от рабочих мест (пользователей) которым необходимо
+                        обеспечить доступ. Также индивидуально делается предложение исходя из оборота компании.</p>
+
+                    <p>Продукт не возможно использовать безвозмездно.</p>
+                    <p>родукт продается свободно на территории Российской Федерации.</p>
                 </div>
             </section>
         </>

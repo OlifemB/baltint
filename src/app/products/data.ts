@@ -11,7 +11,7 @@ export interface IProductsPageData {
             }
             text: string
             title: string
-        },{
+        }, {
             btn2: {
                 link: string
                 title: string
@@ -27,7 +27,12 @@ export interface IProductsPageData {
                 alt: string
                 title: string
             }[]
-        },{
+        }, {
+            title: string,
+            list: {
+                title: string
+            }[]
+        }, {
             documents: {
                 img: {
                     src: string
@@ -51,7 +56,7 @@ export const data: IProductsPageData = {
                 src: img,
                 alt: 'Наши продукты'
             }
-        },{
+        }, {
             title: 'Big Data Bridge',
             text: 'BIG DATA BRIDGE представляет собой SaaS-сервис, поэтому распространяется в виде интернет-решения и не требует установки.',
             btn1: {
@@ -75,7 +80,17 @@ export const data: IProductsPageData = {
                 alt: '',
                 title: '',
             },]
-        },{
+        }, {
+            title: 'Библиотеки, скрипты, технологический стек, которые использовали при создании программы:',
+            list: [
+                {title: 'React JS'},
+                {title: 'MobX, MobX-State-Tree '},
+                {title: 'WebSocket'},
+                {title: 'Node JS'},
+                {title: 'Express'},
+                {title: 'PostgreSQL JSON'},
+            ]
+        }, {
             title: 'Документы',
             documents: [{
                 title: 'Документ 1',

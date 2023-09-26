@@ -9,8 +9,7 @@ import {useAppSelector} from "@/redux/store";
 const AboutPage = () => {
     const {lang} = useAppSelector(store => store.appReducer)
     const pageData = data[lang as keyof IAboutPageData]
-    
-    console.log(pageData.sections[2].cards[0].icon)
+
     return (
         <>
             <section className={'flex flex-1'}>
@@ -23,9 +22,12 @@ const AboutPage = () => {
                             <p>
                                 {pageData.sections[0].text}
                             </p>
+                            <p>
+                                {pageData.sections[0].text2}
+                            </p>
                         </div>
                     </div>
-                    
+
                     <div className={'flex flex-col flex-1 items-center justify-center relative'}>
                         <Image
                             priority={true}
@@ -36,7 +38,7 @@ const AboutPage = () => {
                     </div>
                 </div>
             </section>
-            
+
             {/*<section className={'bg-white'}>*/}
             {/*    <div className={'flex flex-col items-center justify-center container mx-auto gap-8 pt-20 pb-10'}>*/}
             {/*        <h3 className={'text-xl text-center font-bold max-w-6xl'}>*/}
@@ -47,7 +49,7 @@ const AboutPage = () => {
             {/*        </p>*/}
             {/*    </div>*/}
             {/*</section>*/}
-            
+
             <section className={'bg-white'}>
                 <div className={'flex flex-col items-center justify-center container mx-auto gap-8 pt-10 pb-20'}>
                     <h2 className={'text-4xl font-bold'}>{pageData.sections[2].title}</h2>
@@ -68,6 +70,25 @@ const AboutPage = () => {
                                 </div>
                             </div>
                         )}
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div className={'flex flex-col items-center justify-center container mx-auto gap-8 pt-10 pb-20'}>
+                    <h2 className={'text-4xl font-bold'}>Наши цели</h2>
+                    <div className={'flex flex-row  justify-between gap-8'}>
+                        <ul className={'flex flex-col gap-2'}>
+                            <li>1) Оставаться лидером в сфере разработки инновационных решений для сервисных и
+                                строительных компаний
+                            </li>
+                            <li>2) Быть компанией, которая основывается на профессионализме и непрерывном развитии
+                                сотрудников
+                            </li>
+                            <li>3) Помогать клиентам в цифровой трансформации их бизнеса, решая нетривиальные задачи и
+                                цифровизируя процессы
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>

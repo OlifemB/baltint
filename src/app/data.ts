@@ -26,12 +26,12 @@ export interface IHomePageData {
 export const data:IHomePageData = {
     ru: {
         sections: [{
-            title: 'Baltic Integration Group',
-            text: 'Мы – IT компания, готовим современные и гибкие решения для строительных и сервисных компаний.',
             img: {
                 src: img,
                 alt: 'Baltic Integration Group'
             },
+            title: 'Baltic Integration Group',
+            text: 'Мы – IT компания, готовим современные и гибкие решения для строительных и сервисных компаний.',
             btn1: {
                 title: 'Наши продукты',
                 link: '/products'
