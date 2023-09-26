@@ -47,7 +47,7 @@ const ProductsPage = () => {
                 <div className={'flex flex-col items-center justify-center gap-10 container mx-auto py-20 px-8'}>
                     <h2 className={'text-4xl font-bold'}>{pageData.sections[1].title}</h2>
                     <p className={'max-w-2xl text-center text-xl'}>{pageData.sections[1].text}</p>
-                    <div className={'flex flex-row flex-1 gap-4'}>
+                    <div className={'flex flex-col lg:flex-row flex-1 gap-4'}>
                         <button className={'btn btn-primary'}>
                             {pageData.sections[1].btn1.title}
                         </button>

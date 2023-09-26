@@ -51,9 +51,9 @@ const AboutPage = () => {
             {/*</section>*/}
 
             <section className={'bg-white'}>
-                <div className={'flex flex-col items-center justify-center container mx-auto gap-8 pt-10 pb-20'}>
+                <div className={'flex flex-col items-center justify-center container mx-auto gap-8 pt-10 pb-20 px-4'}>
                     <h2 className={'text-4xl font-bold'}>{pageData.sections[2].title}</h2>
-                    <div className={'flex flex-row  justify-between gap-8'}>
+                    <div className={'flex flex-col md:flex-row  justify-between gap-8'}>
                         {pageData.sections[2].cards.map((card, index) =>
                             <div
                                 key={card.title + card.text + index}
@@ -75,7 +75,7 @@ const AboutPage = () => {
             </section>
 
             <section>
-                <div className={'flex flex-col items-center justify-center container mx-auto gap-8 pt-10 pb-20'}>
+                <div className={'flex flex-col items-center justify-center container mx-auto gap-8 pt-10 pb-20 px-4'}>
                     <h2 className={'text-4xl font-bold'}>Наши цели</h2>
                     <div className={'flex flex-col  justify-between gap-2'}>
 
