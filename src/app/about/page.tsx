@@ -19,10 +19,10 @@ const AboutPage = () => {
                             <h1 className={'text-6xl font-bold'}>
                                 {pageData.sections[0].title}
                             </h1>
-                            <p>
+                            <p className={'text-lg'}>
                                 {pageData.sections[0].text}
                             </p>
-                            <p>
+                            <p className={'text-lg'}>
                                 {pageData.sections[0].text2}
                             </p>
                         </div>
@@ -62,8 +62,8 @@ const AboutPage = () => {
                                 <div>
                                     <Image src={card.icon} alt={''} className={'w-20 h-20'}/>
                                 </div>
-                                <div className={'font-bold'}>
-                                    {card.title}
+                                <div>
+                                    <p className={'text-lg font-bold'}>{card.title}</p>
                                 </div>
                                 <div>
                                     {card.text}
@@ -77,18 +77,22 @@ const AboutPage = () => {
             <section>
                 <div className={'flex flex-col items-center justify-center container mx-auto gap-8 pt-10 pb-20'}>
                     <h2 className={'text-4xl font-bold'}>Наши цели</h2>
-                    <div className={'flex flex-row  justify-between gap-8'}>
-                        <ul className={'flex flex-col gap-2'}>
-                            <li>1) Оставаться лидером в сфере разработки инновационных решений для сервисных и
-                                строительных компаний
-                            </li>
-                            <li>2) Быть компанией, которая основывается на профессионализме и непрерывном развитии
-                                сотрудников
-                            </li>
-                            <li>3) Помогать клиентам в цифровой трансформации их бизнеса, решая нетривиальные задачи и
-                                цифровизируя процессы
-                            </li>
-                        </ul>
+                    <div className={'flex flex-col  justify-between gap-2'}>
+
+                        <p className={'text-lg'}>
+                            1) Оставаться лидером в сфере разработки инновационных решений для сервисных и строительных
+                            компаний
+                        </p>
+
+                        <p className={'text-lg'}>
+                            2) Быть компанией, которая основывается на профессионализме и непрерывном развитии
+                            сотрудников
+                        </p>
+
+                        <p className={'text-lg'}>
+                            3) Помогать клиентам в цифровой трансформации их бизнеса, решая нетривиальные задачи и
+                            цифровизируя процессы
+                        </p>
                     </div>
                 </div>
             </section>

@@ -21,8 +21,8 @@ function Home() {
                         <h1 className={'text-6xl font-bold'}>
                             {pageData.sections[0].title}
                         </h1>
-                        
-                        <p>
+
+                        <p className={'text-lg'}>
                             {pageData.sections[0].text}
                         </p>
                     </div>

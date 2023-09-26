@@ -16,13 +16,13 @@ const Header = () => {
     const pathname = usePathname()
     const [isOpen, setIsOpen] = useState(false)
     const matches = useMediaQuery('(max-width: 768px)')
-    
+
     const toggleMenuHandler = () => {
         setIsOpen(!isOpen)
     }
-    
-    console.log('marches',matches)
-    
+
+    console.log('marches', matches)
+
     return (
         <header className={'bg-primary shadow-xl fixed left-0 top-0 right-0 z-50'}>
             <div
@@ -33,24 +33,26 @@ const Header = () => {
                 >
                     {componentData.logo}
                 </Link>
-                
+
                 {matches
                     ? <>
                         <nav
                             id={'mobile-menu'}
-                            className={clsx('absolute overflow-hidden left-0 right-0 top-6 flex flex-col justify-center items-start gap-2', isOpen ? 'h-auto' : 'h-0')}>
+                            className={clsx('fixed left-0 top-0 w-full h-0 0 bg-gray-800 overflow-hidden left-0 right-0 flex  flex-1 w-full flex-col justify-center items-start gap-2', isOpen ? 'h-full' : 'h-0')}
+                        >
                             {componentData.nav.map((item, index) =>
-                                <div className={'relative'} key={item.title + item.link + index}>
+                                <div className={'relative px-8 flex flex-col gap-8'}
+                                     key={item.title + item.link + index} onClick={toggleMenuHandler}>
                                     <Link
                                         href={item.link}
-                                        className={clsx('font-normal hover:text-gray-100  duration-300', item.id === pathname.slice(1) ? 'text-gray-100 font-bold' : 'text-gray-400 ')}
+                                        className={clsx('font-normal hover:text-gray-100  duration-300 text-3xl', item.id === pathname.slice(1) ? 'text-gray-100 font-bold' : 'text-gray-400 ')}
                                     >
                                         {item.title}
                                     </Link>
                                 </div>
                             )}
                         </nav>
-                        
+
                         <IconMenu
                             className={'text-gray-400 hover:text-gray-100 duration-300 w-6 h-auto cursor-pointer'}
                             onClick={toggleMenuHandler}
@@ -72,7 +74,7 @@ const Header = () => {
                         )}
                     </nav>
                 }
-            
+
             </div>
         </header>
     );

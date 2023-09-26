@@ -28,13 +28,13 @@ export const data: IContactsPageData = {
             title: 'Контакты',
             rows: [{
                 title: 'Адрес:',
-                text: '119048, г. Москва, ул. Усачёва, д. 33, стр. 2'
+                text: '191028, Санкт-Петербург, пр-кт Литейный, д. 26, литера А'
             }, {
                 title: 'Телефон:',
                 text: '8 (999) - 99 - 99'
             }, {
                 title: 'Email:',
-                text: 'main@mail.com'
+                text: 'info@baltint.group'
             }]
         }
     }

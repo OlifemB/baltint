@@ -12,7 +12,7 @@ const ContactsPage = () => {
     return (
         <>
             <section className={'flex flex-1'}>
-                <div className={'flex flex-col md:flex-row container mx-auto px-4 md:px-0 py-40'}>
+                <div className={'flex flex-col md:flex-row container mx-auto px-4 md:px-0 py-40 gap-20'}>
                     <div className={'flex flex-col flex-1 items-start justify-center gap-8'}>
                         <Image
                             priority={true}
@@ -22,7 +22,7 @@ const ContactsPage = () => {
                         />
                     </div>
 
-                    <div className={'flex flex-col flex-1 justify-center items-start gap-8 pl-12'}>
+                    <div className={'flex flex-col flex-1 justify-center items-start gap-8'}>
                         <h1 className={'text-6xl font-bold'}>
                             {pageData.header.title}
                         </h1>

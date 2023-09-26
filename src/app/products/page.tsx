@@ -5,6 +5,9 @@ import {data, IProductsPageData} from './data'
 import Image from "next/image";
 import ImageGallery from "react-image-gallery";
 import {useAppSelector} from "@/redux/store";
+import IconTech from '@/assets/icons/pack1/icon-tech.svg'
+import IconLocation from '@/assets/icons/pack1/icon-location.svg'
+import IconGrow from '@/assets/icons/pack1/icon-grow.svg'
 
 const ProductsPage = () => {
     const {lang} = useAppSelector(store => store.appReducer)
@@ -13,14 +16,14 @@ const ProductsPage = () => {
     return (
         <>
             <section className={'flex flex-1'}>
-                <div className={'flex flex-col md:flex-row container mx-auto px-4 md:px-0 py-40'}>
+                <div className={'flex flex-col md:flex-row container mx-auto px-4 py-40'}>
                     <div className={'flex flex-col flex-1 items-start justify-center gap-8'}>
                         <div className={'flex flex-col justify-start items-start gap-6 max-w-xl'}>
                             <h1 className={'text-6xl font-bold'}>
                                 {pageData.sections[0].title}
                             </h1>
 
-                            <p>
+                            <p className={'text-lg'}>
                                 {pageData.sections[0].text}
                             </p>
                         </div>
@@ -41,9 +44,9 @@ const ProductsPage = () => {
             </section>
 
             <section className={'bg-white'}>
-                <div className={'flex flex-col items-center justify-center gap-10 container mx-auto py-20'}>
+                <div className={'flex flex-col items-center justify-center gap-10 container mx-auto py-20 px-8'}>
                     <h2 className={'text-4xl font-bold'}>{pageData.sections[1].title}</h2>
-                    <p className={'max-w-4xl text-center'}>{pageData.sections[1].text}</p>
+                    <p className={'max-w-2xl text-center text-xl'}>{pageData.sections[1].text}</p>
                     <div className={'flex flex-row flex-1 gap-4'}>
                         <button className={'btn btn-primary'}>
                             {pageData.sections[1].btn1.title}
@@ -55,43 +58,91 @@ const ProductsPage = () => {
                     {/*<ImageGallery items={[]} />*/}
                 </div>
 
-                <div className={'flex flex-col items-start justify-start gap-0 container mx-auto py-10'}>
-                    <h2 className={'text-1xl font-bold'}>
-                        {pageData.sections[2].title}
-                    </h2>
-                    <ul>
-                        {pageData.sections[2].list.map(item => <li>{item.title}</li>)}
-                    </ul>
+                <div className={'flex flex-col lg:flex-row items-start justify-start container mx-auto py-10 max-w-4xl px-8'}>
+                    <div className={'flex flex-col lg:flex-row items-center justify-center gap-20'}>
+                        <div className={'flex flex-col items-center justify-center'}>
+                            <IconTech className={'w-52'}/>
+                        </div>
+
+                        <div className={'flex flex-col gap-4'}>
+                            <h2 className={'text-2xl font-bold'}>
+                                Технологический стек
+                            </h2>
+
+                            <div className={'flex flex-col gap-1'}>
+                                {pageData.sections[2].list.map(item =>
+                                    <p className={'text-lg'}> - {item.title}</p>
+                                )}
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
-                <div className={'flex flex-col items-start justify-start gap-0 container mx-auto py-10'}>
-                    <h2 className={'text-1xl font-bold'}>
-                        Служба технической поддержки:
-                    </h2>
-                    <ul>
-                        <li>Время работы службы технической поддержки: Понедельник – пятница с 09.00 – 17.30</li>
-                        <li>Почтовый адрес для направления запросов: 191028, Санкт-Петербург, пр-кт Литейный, д. 26,
-                            литера А
-                        </li>
-                        <li>Телефон:</li>
-                        <li>Email:</li>
-                        <li>Служба технической поддержки поможет в обновлении продукта, помогут устранить сбои при
-                            использовании Продукта
-                        </li>
 
+                <div className={'flex flex-col items-start justify-start container mx-auto py-10 max-w-4xl px-8'}>
+                    <div className={'flex flex-col lg:flex-row items-center justify-center gap-20'}>
+                        <div className={'flex flex-col items-center justify-center'}>
+                            <IconLocation className={'w-52'}/>
+                        </div>
 
-                    </ul>
+                        <div className={'flex flex-col gap-4'}>
+                            <h2 className={'text-2xl font-bold'}>
+                                Служба технической поддержки:
+                            </h2>
+                            <p className={'text-lg'}>
+                                <span className={'font-semibold'}>Время работы службы технической поддержки:</span>
+                                <br/> Понедельник – пятница с 09.00 – 17.30
+                            </p>
+
+                            <p className={'text-lg'}>
+                                <span className={'font-semibold'}>Почтовый адрес для направления запросов:</span>
+                                <br/>191028, Санкт-Петербург, пр-кт Литейный, д. 26,
+                                литера А
+                            </p>
+
+                            <p className={'text-lg'}>
+                                <span className={'font-semibold'}>Телефон:</span>
+                            </p>
+
+                            <p className={'text-lg'}>
+                                <span className={'font-semibold'}>Email:</span>
+                            </p>
+
+                            <p className={'text-lg'}>
+                                Служба технической поддержки поможет в обновлении продукта, помогут устранить сбои при
+                                использовании Продукта
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
-                <div className={'flex flex-col items-start justify-start gap-0 container mx-auto py-10'}>
-                    <h2 className={'text-1xl font-bold'}>
-                        Стоимость продукта рассчитывается индивидуально (Связаться с нами/активная ссылка)
-                    </h2>
-                    <p>Цена на продукт определяется в зависимости от рабочих мест (пользователей) которым необходимо
-                        обеспечить доступ. Также индивидуально делается предложение исходя из оборота компании.</p>
+                <div className={'flex flex-col items-start justify-start container mx-auto py-10 pb-20 max-w-4xl px-8'}>
+                    <div className={'flex flex-col lg:flex-row items-center justify-center gap-20'}>
+                         <div className={'flex flex-col items-center justify-center'}>
+                            <IconGrow className={'w-52'}/>
+                        </div>
 
-                    <p>Продукт не возможно использовать безвозмездно.</p>
-                    <p>родукт продается свободно на территории Российской Федерации.</p>
+                        <div className={'flex flex-col gap-4'}>
+                            <h2 className={'text-2xl font-bold'}>
+                                Стоимость продукта рассчитывается индивидуально (Связаться с нами/активная ссылка)
+                            </h2>
+                            <div>
+                                <p className={'text-lg'}>
+                                    Цена на продукт определяется в зависимости от рабочих мест (пользователей) которым
+                                    необходимо
+                                    обеспечить доступ. Также индивидуально делается предложение исходя из оборота
+                                    компании.
+                                </p>
+                                <p className={'text-lg'}>
+                                    Продукт не возможно использовать безвозмездно.
+                                </p>
+                                <p className={'text-lg'}>
+                                    Продукт продается свободно на территории Российской Федерации.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </>
