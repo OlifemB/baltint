@@ -13,17 +13,17 @@ export interface IFooterData {
 export const data: IFooterData = {
     ru: {
         col1: [{
-            text: '119048, г. Москва, ул. Усачёва, д. 33, стр. 2',
+            text: '191028, Санкт-Петербург, пр-кт Литейный, д. 26, литера А',
         }, {
             text: '8 (999) - 99 - 99',
         }, {
-            text: '191028, Санкт-Петербург, пр-кт Литейный, д. 26, литера А'
+            text: 'info@baltint.group'
         }],
         col2: [{
             text: 'Политика конфиденциальности',
         }, {
             text: 'Публичная оферта',
         }],
-        copyright: 'Baltic Integrational Group @ 2023. Все права защищены.'
+        copyright: 'Baltic International Group @ 2023. Все права защищены.'
     }
 }

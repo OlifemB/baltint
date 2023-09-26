@@ -30,6 +30,6 @@ export const data: IHeaderData = {
             title: 'Контакты',
             link: '/contacts'
         }],
-        logo: 'Baltic Integration Group'
+        logo: 'Baltic International Group'
     }
 }
