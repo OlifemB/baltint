@@ -16,7 +16,7 @@ const AboutPage = () => {
                 <div className={'flex flex-col md:flex-row container mx-auto px-4 lg:px-0 gap-8 py-16 lg:py-32'}>
                     <div className={'flex flex-col flex-1 items-center justify-center relative'}>
                         <Image
-                            priority={true}
+                            priority
                             className={'w-full h-auto scale-125'}
                             src={pageData.sections[0].img.src}
                             alt={pageData.sections[0].img.alt}

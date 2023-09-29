@@ -46,6 +46,7 @@ function Home() {
                 
                 <div className={'flex flex-col flex-1 items-center justify-center'}>
                     <Image
+                        priority
                         className={'w-full h-auto scale-125'}
                         src={pageData.sections[0].img.src}
                         alt={pageData.sections[0].img.alt}

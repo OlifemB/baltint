@@ -57,7 +57,9 @@ const ProductsPage = () => {
                     </div>
                     {/*<ImageGallery items={[]} />*/}
                 </div>
+            </section>
 
+            <section className={'bg-white'}>
                 <div
                     className={'flex flex-col lg:flex-row items-start justify-start container mx-auto py-10 max-w-4xl px-8'}>
                     <div className={'flex flex-col lg:flex-row items-center justify-center gap-20'}>
@@ -67,11 +69,11 @@ const ProductsPage = () => {
 
                         <div className={'flex flex-col gap-4'}>
                             <h2 className={'text-2xl font-bold'}>
-                                Технологический стек
+                                {pageData.sections[2].list[0].title}
                             </h2>
 
                             <div className={'flex flex-col gap-1'}>
-                                {pageData.sections[2].list.map(item =>
+                                {pageData.sections[2].list[0].list.map(item =>
                                     <p className={'text-lg'}> - {item.title}</p>
                                 )}
                             </div>
@@ -89,40 +91,23 @@ const ProductsPage = () => {
 
                         <div className={'flex flex-col gap-4'}>
                             <h2 className={'text-2xl font-bold'}>
-                                Служба технической поддержки:
+                                {pageData.sections[2].list[1].title}
                             </h2>
-                            <p className={'text-lg'}>
-                                <span className={'font-semibold'}>Время работы службы технической поддержки:</span>
-                                <br/> Понедельник – пятница с 09.00 – 17.30
-                            </p>
 
-                            <p className={'text-lg'}>
-                                <span className={'font-semibold'}>Почтовый адрес для направления запросов:</span>
-                                <br/>191028, Санкт-Петербург, пр-кт Литейный, д. 26,
-                                литера А
-                            </p>
 
-                            <p className={'text-lg'}>
-                                <span className={'font-semibold'}>Телефон: </span>
-                            </p>
-
-                            <p className={'text-lg'}>
-                                <span className={'font-semibold'}>Email:
-                                    <a href={'mailto:info@baltint.group'}>
-                                        info@baltint.group
-                                    </a>
-                                </span>
-                            </p>
-
-                            <p className={'text-lg'}>
-                                Служба технической поддержки поможет в обновлении продукта, помогут устранить сбои при
-                                использовании Продукта
-                            </p>
+                            <div className={'flex flex-col gap-1'}>
+                                {pageData.sections[2].list[1].list.map(item =>
+                                    <p className={'text-lg'}>
+                                        <span className={'font-semibold block'}>{item.title}</span>
+                                        <span className={'block'}>{item.text}</span>
+                                    </p>
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div className={'flex flex-col items-start justify-start container mx-auto py-10 pb-20 max-w-4xl px-8'}>
+                <div className={'flex flex-col items-start justify-start container mx-auto py-10 max-w-4xl px-8'}>
                     <div className={'flex flex-col lg:flex-row items-center justify-center gap-20'}>
                         <div className={'flex flex-col items-center justify-center'}>
                             <IconGrow className={'w-52'}/>
@@ -130,21 +115,16 @@ const ProductsPage = () => {
 
                         <div className={'flex flex-col gap-4'}>
                             <h2 className={'text-2xl font-bold'}>
-                                Стоимость продукта рассчитывается индивидуально (Связаться с нами/активная ссылка)
+                                {pageData.sections[2].list[2].title}
                             </h2>
-                            <div>
-                                <p className={'text-lg'}>
-                                    Цена на продукт определяется в зависимости от рабочих мест (пользователей) которым
-                                    необходимо
-                                    обеспечить доступ. Также индивидуально делается предложение исходя из оборота
-                                    компании.
-                                </p>
-                                <p className={'text-lg'}>
-                                    Продукт не возможно использовать безвозмездно.
-                                </p>
-                                <p className={'text-lg'}>
-                                    Продукт продается свободно на территории Российской Федерации.
-                                </p>
+
+
+                            <div className={'flex flex-col gap-1'}>
+                                {pageData.sections[2].list[2].list.map(item =>
+                                    <p className={'text-lg'}>
+                                        <span className={'block'}>{item.text}</span>
+                                    </p>
+                                )}
                             </div>
                         </div>
                     </div>

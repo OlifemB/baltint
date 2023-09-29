@@ -1,5 +1,8 @@
 // import img from '@/assets/images/bg1/2.png'
 import img from '@/assets/images/bg2/2.png'
+import IconTech from '@/assets/icons/pack1/icon-tech.svg'
+import IconLocation from '@/assets/icons/pack1/icon-location.svg'
+import IconGrow from '@/assets/icons/pack1/icon-grow.svg'
 import {StaticImageData} from "next/image";
 
 export interface IProductsPageData {
@@ -28,9 +31,16 @@ export interface IProductsPageData {
                 title: string
             }[]
         }, {
-            title: string,
             list: {
-                title: string
+                img: {
+                    src: StaticImageData,
+                    alt: string
+                }
+                title: string,
+                list: {
+                    title?: string,
+                    text?: string
+                }[]
             }[]
         }, {
             documents: {
@@ -81,15 +91,65 @@ export const data: IProductsPageData = {
                 title: '',
             },]
         }, {
-            title: 'Библиотеки, скрипты, технологический стек, которые использовали при создании программы:',
-            list: [
-                {title: 'React JS'},
-                {title: 'MobX'},
-                {title: 'WebSocket'},
-                {title: 'Node JS'},
-                {title: 'Express'},
-                {title: 'PostgreSQL'},
-            ]
+            list: [{
+                img: {
+                    src: IconTech,
+                    alt: 'asd'
+                },
+                title: 'Основные компоненты технологического стека BIG DATA BRIDGE:',
+                list: [
+                    {title: 'React JS'},
+                    {title: 'MobX'},
+                    {title: 'WebSocket'},
+                    {title: 'Node JS'},
+                    {title: 'Express'},
+                    {title: 'PostgreSQL'},
+                ]
+            }, {
+                img: {
+                    src: IconLocation,
+                    alt: 'Location'
+                },
+                title: 'Служба технической поддержки:',
+                list: [{
+                    title: 'Время работы службы технической поддержки:',
+                    text: 'Понедельник – пятница с 09.00 – 17.30',
+                }, {
+                    title: 'Почтовый адрес для направления запросов:',
+                    text: '191028, Санкт-Петербург, пр-кт Литейный, д. 26, литера А',
+                }, {
+                    title: 'Телефон:',
+                    text: '',
+                }, {
+                    title: 'Email:',
+                    text: '',
+                }, {
+                    title: '',
+                    text: 'Служба технической поддержки поможет в обновлении продукта, помогут устранить сбои при использовании Продукта',
+                },]
+            }, {
+                img: {
+                    src: IconGrow,
+                    alt: 'grow'
+                },
+                title: 'Служба технической поддержки:',
+                list: [{
+                    title: 'Время работы службы технической поддержки:',
+                    text: 'Понедельник – пятница с 09.00 – 17.30',
+                }, {
+                    title: 'Почтовый адрес для направления запросов:',
+                    text: '191028, Санкт-Петербург, пр-кт Литейный, д. 26, литера А',
+                }, {
+                    title: 'Телефон:',
+                    text: '',
+                }, {
+                    title: 'Email:',
+                    text: '',
+                }, {
+                    title: '',
+                    text: 'Служба технической поддержки поможет в обновлении продукта, помогут устранить сбои при использовании Продукта',
+                },]
+            }]
         }, {
             title: 'Документы',
             documents: [{
