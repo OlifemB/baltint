@@ -25,7 +25,6 @@
     "@types/redux-logger": "^3.0.9",
     "autoprefixer": "^10.4.15",
     "clsx": "^2.0.0",
-    "i": "^0.3.7",
     "next-redux-wrapper": "^8.1.0",
     "npm": "^10.1.0",
     "postcss": "^8.4.29",

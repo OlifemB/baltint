@@ -16,7 +16,7 @@ const ProductsPage = () => {
     return (
         <>
             <section className={'flex flex-1'}>
-                <div className={'flex flex-col md:flex-row container mx-auto px-4 py-40'}>
+                <div className={'flex flex-col md:flex-row container mx-auto px-4 md:px-0 lg:py-32'}>
                     <div className={'flex flex-col flex-1 items-start justify-center gap-8'}>
                         <div className={'flex flex-col justify-start items-start gap-6 max-w-xl'}>
                             <h1 className={'text-6xl font-bold'}>
@@ -58,7 +58,8 @@ const ProductsPage = () => {
                     {/*<ImageGallery items={[]} />*/}
                 </div>
 
-                <div className={'flex flex-col lg:flex-row items-start justify-start container mx-auto py-10 max-w-4xl px-8'}>
+                <div
+                    className={'flex flex-col lg:flex-row items-start justify-start container mx-auto py-10 max-w-4xl px-8'}>
                     <div className={'flex flex-col lg:flex-row items-center justify-center gap-20'}>
                         <div className={'flex flex-col items-center justify-center'}>
                             <IconTech className={'w-52'}/>
@@ -102,11 +103,15 @@ const ProductsPage = () => {
                             </p>
 
                             <p className={'text-lg'}>
-                                <span className={'font-semibold'}>Телефон:</span>
+                                <span className={'font-semibold'}>Телефон: </span>
                             </p>
 
                             <p className={'text-lg'}>
-                                <span className={'font-semibold'}>Email:</span>
+                                <span className={'font-semibold'}>Email:
+                                    <a href={'mailto:info@baltint.group'}>
+                                        info@baltint.group
+                                    </a>
+                                </span>
                             </p>
 
                             <p className={'text-lg'}>
@@ -119,7 +124,7 @@ const ProductsPage = () => {
 
                 <div className={'flex flex-col items-start justify-start container mx-auto py-10 pb-20 max-w-4xl px-8'}>
                     <div className={'flex flex-col lg:flex-row items-center justify-center gap-20'}>
-                         <div className={'flex flex-col items-center justify-center'}>
+                        <div className={'flex flex-col items-center justify-center'}>
                             <IconGrow className={'w-52'}/>
                         </div>
 

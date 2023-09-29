@@ -84,11 +84,11 @@ export const data: IProductsPageData = {
             title: 'Библиотеки, скрипты, технологический стек, которые использовали при создании программы:',
             list: [
                 {title: 'React JS'},
-                {title: 'MobX, MobX-State-Tree '},
+                {title: 'MobX'},
                 {title: 'WebSocket'},
                 {title: 'Node JS'},
                 {title: 'Express'},
-                {title: 'PostgreSQL JSON'},
+                {title: 'PostgreSQL'},
             ]
         }, {
             title: 'Документы',
