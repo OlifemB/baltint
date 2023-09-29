@@ -32,10 +32,6 @@ export interface IProductsPageData {
             }[]
         }, {
             list: {
-                img: {
-                    src: StaticImageData,
-                    alt: string
-                }
                 title: string,
                 list: {
                     title?: string,
@@ -92,10 +88,6 @@ export const data: IProductsPageData = {
             },]
         }, {
             list: [{
-                img: {
-                    src: IconTech,
-                    alt: 'asd'
-                },
                 title: 'Основные компоненты технологического стека BIG DATA BRIDGE:',
                 list: [
                     {title: 'React JS'},
@@ -106,10 +98,6 @@ export const data: IProductsPageData = {
                     {title: 'PostgreSQL'},
                 ]
             }, {
-                img: {
-                    src: IconLocation,
-                    alt: 'Location'
-                },
                 title: 'Служба технической поддержки:',
                 list: [{
                     title: 'Время работы службы технической поддержки:',
@@ -128,10 +116,6 @@ export const data: IProductsPageData = {
                     text: 'Служба технической поддержки поможет в обновлении продукта, помогут устранить сбои при использовании Продукта',
                 },]
             }, {
-                img: {
-                    src: IconGrow,
-                    alt: 'grow'
-                },
                 title: 'Служба технической поддержки:',
                 list: [{
                     title: 'Время работы службы технической поддержки:',
