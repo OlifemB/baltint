@@ -41,7 +41,7 @@ export interface IAboutPageData {
             }[]
         }, {
             img: {
-                src: string
+                src: StaticImageData
                 alt: string
             }
             title: string
