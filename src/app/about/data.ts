@@ -76,7 +76,7 @@ export const data: IAboutPageData = {
             title: 'Наши преимущества',
             cards: [{
                 icon: IconTeam,
-                title: 'Профессиональная команда',
+                title: 'Экспертность в строительной отрасли',
                 text: ''
             }, {
                 icon: IconQuality,
@@ -84,7 +84,7 @@ export const data: IAboutPageData = {
                 text: ''
             }, {
                 icon: IconTech,
-                title: 'Современные технологии ',
+                title: 'Современные индивидуальные IT решения',
                 text: ''
             },]
         }, {

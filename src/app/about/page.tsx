@@ -13,7 +13,7 @@ const AboutPage = () => {
     return (
         <>
             <section className={'flex flex-1'}>
-                <div className={'flex flex-col md:flex-row container mx-auto px-4 md:px-0  lg:pt-32 lg:pb-12 gap-4'}>
+                <div className={'flex flex-col md:flex-row container mx-auto px-4 lg:px-0 gap-8 py-16 lg:py-32'}>
                     <div className={'flex flex-col flex-1 items-center justify-center relative'}>
                         <Image
                             priority={true}
@@ -89,10 +89,10 @@ const AboutPage = () => {
                                 <div>
                                     <Image src={card.icon} alt={''} className={'w-20 h-20'}/>
                                 </div>
-                                <div>
+                                <div className={'text-center'}>
                                     <p className={'text-lg font-bold'}>{card.title}</p>
                                 </div>
-                                <div>
+                                <div className={'text-center'}>
                                     {card.text}
                                 </div>
                             </div>
@@ -108,7 +108,7 @@ const AboutPage = () => {
 
                     <div className={'flex flex-col  justify-between gap-2'}>
                         {pageData.sections[3].list.map(item =>
-                            <p className={'text-lg'}>
+                            <p className={'text-lg '}>
                                 {item.title}
                             </p>
                         )}

@@ -16,7 +16,7 @@ const ProductsPage = () => {
     return (
         <>
             <section className={'flex flex-1'}>
-                <div className={'flex flex-col md:flex-row container mx-auto px-4 md:px-0 lg:py-32'}>
+                <div className={'flex flex-col md:flex-row container mx-auto px-4 lg:px-0 gap-8 py-16 lg:py-32'}>
                     <div className={'flex flex-col flex-1 items-start justify-center gap-8'}>
                         <div className={'flex flex-col justify-start items-start gap-6 max-w-xl'}>
                             <h1 className={'text-6xl font-bold'}>
