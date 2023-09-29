@@ -16,13 +16,13 @@ const Header = () => {
     const pathname = usePathname()
     const [isOpen, setIsOpen] = useState(false)
     const matches = useMediaQuery('(max-width: 768px)')
-
+    
     const toggleMenuHandler = () => {
         setIsOpen(!isOpen)
     }
-
+    
     console.log('marches', matches)
-
+    
     return (
         <header className={'bg-primary shadow-xl fixed left-0 top-0 right-0 z-50'}>
             <div
@@ -33,7 +33,7 @@ const Header = () => {
                 >
                     {componentData.logo}
                 </Link>
-
+                
                 {matches
                     ? <>
                         <nav
@@ -52,7 +52,7 @@ const Header = () => {
                                 </div>
                             )}
                         </nav>
-
+                        
                         <IconMenu
                             className={'text-gray-400 hover:text-gray-100 duration-300 w-6 h-auto cursor-pointer'}
                             onClick={toggleMenuHandler}
@@ -74,7 +74,7 @@ const Header = () => {
                         )}
                     </nav>
                 }
-
+            
             </div>
         </header>
     );
