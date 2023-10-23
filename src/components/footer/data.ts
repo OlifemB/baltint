@@ -15,7 +15,7 @@ export const data: IFooterData = {
         col1: [{
             text: '191028, Санкт-Петербург, пр-кт Литейный, д. 26, литера А',
         }, {
-            text: '8 (999) - 99 - 99',
+            text: '+7 (812) 770-71-27',
         }, {
             text: 'info@baltint.group'
         }],

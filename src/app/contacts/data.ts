@@ -31,7 +31,7 @@ export const data: IContactsPageData = {
                 text: '191028, Санкт-Петербург, пр-кт Литейный, д. 26, литера А'
             }, {
                 title: 'Телефон:',
-                text: '8 (999) - 99 - 99'
+                text: '+7 (812) 770-71-27'
             }, {
                 title: 'Email:',
                 text: 'info@baltint.group'
