@@ -34,7 +34,7 @@ const ContactsPage = () => {
                                     key={row.text + row.title + index}
                                 >
                                     <span className={'font-bold text-xl'}>{row.title}</span>
-                                    <span className={' text-xl'}>{row.text}</span>
+                                    <a className={'text-xl opacity-80 hover:opacity-100 transition ease-in-out'} href={row.link}>{row.text}</a>
                                 </div>
                             )}
                         </div>
