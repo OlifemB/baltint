@@ -10,6 +10,7 @@ import IconMenu from "@/assets/icons/icon-menu.svg"
 import IconClose from "@/assets/icons/icon-close.svg"
 import {useMediaQuery} from "usehooks-ts";
 import Image from "next/image";
+import Logo from '@/assets/vectors/logo.svg'
 
 
 const Header = () => {
@@ -30,7 +31,7 @@ const Header = () => {
                     href={'/'}
                     className={clsx('font-bold text-xl lg:text-2xl flex-1 hover:text-gray-100 duration-300 uppercase tracking-wide', pathname === '/' ? 'text-gray-100' : 'text-gray-400')}
                 >
-                    <componentData.logo className={'h-6'}/>
+                    <Logo className={'h-6'}/>
                 </Link>
                 
                 <nav
