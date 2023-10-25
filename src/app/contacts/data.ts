@@ -38,7 +38,7 @@ export const data: IContactsPageData = {
                 text: consts.phone.title,
                 link: 'tel:' + consts.phone.value,
             }, {
-                title: 'Email',
+                title: 'Email:',
                 text: consts.email.title,
                 link: 'mailto:' + consts.email.value,
                 
