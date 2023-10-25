@@ -10,7 +10,7 @@ const Footer = () => {
     const componentData = data[lang as keyof IFooterData]
 
     return (
-        <footer className={'bg-gray-800'}>
+        <footer className={'bg-[#34364F]'}>
             <div className={'flex flex-col flex-1 container mx-auto px-4 md:px-0'}>
                 <div className={'flex flex-1 flex-col md:flex-row flex-1 justify-between items-stretch py-8  gap-2 md:gap-8'}>
                     <div className={'flex flex-1 flex-col gap-2'}>

@@ -23,12 +23,11 @@ function Home() {
                         <div className={'flex flex-col flex-1 items-start justify-center gap-8'}>
                             <div className={'flex flex-col justify-start items-start max-w-xl gap-6'}>
                                 
-                                <h1 className={'text-5xl md:text-6xl font-bold'}>
+                                <h1 className={'text-5xl md:text-6xl font-extrabold tracking-wide'}>
                                     {pageData.sections[0].title.split(' ').map(item =>
                                         <span className={'block'}>{item}</span>
                                     )}
                                 </h1>
-                                
                                 
                                 <p className={'text-lg'}>
                                     {pageData.sections[0].text}
