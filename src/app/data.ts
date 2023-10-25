@@ -1,5 +1,6 @@
 import img from '@/assets/images/bg2/1.png'
 import {StaticImageData} from "next/image";
+import {consts} from "@/common/consts";
 
 export interface IHomePageData {
     ru: {
@@ -27,9 +28,9 @@ export const data:IHomePageData = {
         sections: [{
             img: {
                 src: img,
-                alt: 'Baltic International Group'
+                alt: 'Baltic Integrational Group'
             },
-            title: 'Baltic International Group',
+            title: 'Baltic Integrational Group',
             text: 'Мы – IT компания, которая проектирует, разрабатывает и внедряет современные информационные системы, продукты, платформы для крупных строительных и сервисных компаний.',
             btn1: {
                 title: 'Наши продукты',

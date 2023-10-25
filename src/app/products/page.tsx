@@ -59,12 +59,12 @@ const ProductsPage = () => {
                 </div>
             </section>
             
-            <section className={'bg-white'}>
+            <section className={'bg-white pb-40'}>
                 <div
                     className={'flex flex-col lg:flex-row items-start justify-start container mx-auto py-10 max-w-4xl px-8'}>
                     <div className={'flex flex-col lg:flex-row items-center justify-center gap-20'}>
                         <div className={'flex flex-col items-center justify-center'}>
-                            <IconTech className={'w-52'}/>
+                            <IconTech className={'w-60'}/>
                         </div>
                         
                         <div className={'flex flex-col gap-4'}>
@@ -72,7 +72,7 @@ const ProductsPage = () => {
                                 {pageData.sections[2].list[0].title}
                             </h2>
                             
-                            <div className={'flex flex-col gap-1'}>
+                            <div className={'flex flex-col gap-3'}>
                                 {pageData.sections[2].list[0].list.map(item =>
                                     <p className={'text-lg'}> - {item.title}</p>
                                 )}
@@ -86,7 +86,7 @@ const ProductsPage = () => {
                 <div className={'flex flex-col items-start justify-start container mx-auto py-10 max-w-4xl px-8'}>
                     <div className={'flex flex-col lg:flex-row items-center justify-center gap-20'}>
                         <div className={'flex flex-col items-center justify-center'}>
-                            <IconLocation className={'w-52'}/>
+                            <IconLocation className={'w-60'}/>
                         </div>
                         
                         <div className={'flex flex-col gap-4'}>
@@ -95,12 +95,12 @@ const ProductsPage = () => {
                             </h2>
                             
                             
-                            <div className={'flex flex-col gap-1'}>
+                            <div className={'flex flex-col gap-3'}>
                                 {pageData.sections[2].list[1].list.map(item =>
-                                    <p className={'text-lg'}>
-                                        <span className={'font-semibold'}>{item.title+"\n"}</span><br/>
-                                        <span className={'whitespace-normal'}>{item.text} </span>
-                                    </p>
+                                    <div className={'text-lg whitespace-pre'}>
+                                        {item.title && <span className={'font-semibold'}>{item.title}</span>}
+                                        <span className={'whitespace-normal'}>{item.text}</span>
+                                    </div>
                                 )}
                             </div>
                         </div>
@@ -108,9 +108,9 @@ const ProductsPage = () => {
                 </div>
                 
                 <div className={'flex flex-col items-start justify-start container mx-auto py-10 max-w-4xl px-8'}>
-                    <div className={'flex flex-col lg:flex-row items-center justify-center gap-20'}>
+                    <div className={'flex flex-col lg:flex-row items-center justify-center gap-20 '}>
                         <div className={'flex flex-col items-center justify-center'}>
-                            <IconGrow className={'w-52'}/>
+                            <IconGrow className={'w-60'}/>
                         </div>
                         
                         <div className={'flex flex-col gap-4'}>
@@ -119,7 +119,7 @@ const ProductsPage = () => {
                             </h2>
                             
                             
-                            <div className={'flex flex-col gap-1'}>
+                            <div className={'flex flex-col gap-3'}>
                                 {pageData.sections[2].list[2].list.map(item =>
                                     <p className={'text-lg'}>
                                         <span className={'block'}>{item.text}</span>
