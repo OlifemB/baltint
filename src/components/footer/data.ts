@@ -24,6 +24,6 @@ export const data: IFooterData = {
         }, {
             text: 'Публичная оферта',
         }],
-        copyright: 'Baltic International Group @ 2023. Все права защищены.'
+        copyright: 'Baltic Integrational Group @ 2023. Все права защищены.'
     }
 }

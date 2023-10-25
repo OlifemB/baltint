@@ -28,9 +28,9 @@ export const data:IHomePageData = {
         sections: [{
             img: {
                 src: img,
-                alt: 'Baltic International Group'
+                alt: 'Baltic Integrational Group'
             },
-            title: 'Baltic International Group',
+            title: 'Baltic Integrational Group',
             text: 'Мы – IT компания, готовим современные и гибкие решения для строительных и сервисных компаний.',
             btn1: {
                 title: 'Наши продукты',

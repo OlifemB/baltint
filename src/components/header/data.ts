@@ -1,3 +1,5 @@
+import Logo from '@/assets/vectors/logo.svg'
+
 export interface IHeaderData {
     ru: {
         nav: {
@@ -5,7 +7,7 @@ export interface IHeaderData {
             link: string
             title: string
         }[]
-        logo: string
+        logo: SVGAElement
     }
 }
 
@@ -30,6 +32,6 @@ export const data: IHeaderData = {
             title: 'Контакты',
             link: '/contacts'
         }],
-        logo: 'Baltic International Group'
+        logo: Logo
     }
 }

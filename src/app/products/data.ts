@@ -2,61 +2,66 @@
 import img from '@/assets/images/bg2/2.png'
 import {StaticImageData} from "next/image";
 
+
 export interface IProductsPageData {
     ru: {
-        sections: [{
+        section1: {
             img: {
-                src: StaticImageData
+                src: any;
                 alt: string
-            }
-            text: string
-            title: string
-        }, {
-            btn2: {
-                link: string
-                title: string
             };
-            text: string
-            btn1: {
-                link: string
-                title: string
-            };
+            text: string;
             title: string
-            gallery: {
-                src: string
-                alt: string
+        };
+        section4: {
+            documents: {
+                img: {
+                    src: string;
+                    alt: string
+                };
+                link: string;
+                text: string;
                 title: string
-            }[]
-        }, {
-            title: string,
+            }[];
+            title: string
+        };
+        section3: {
+            title: string;
             list: {
                 title: string
             }[]
-        }, {
-            documents: {
-                img: {
-                    src: string
-                    alt: string
-                }
-                link: string
-                text: string
+        };
+        section2: {
+            btn2: {
+                link: string;
+                title: string
+            };
+            text: string;
+            btn1: {
+                link: string;
+                title: string
+            };
+            title: string;
+            gallery: {
+                src: string;
+                alt: string;
                 title: string
             }[]
-            title: string
-        }];
+        }
     }
 }
 
-export const data: IProductsPageData = {
+export const data:IProductsPageData  = {
     ru: {
-        sections: [{
-            title: 'Наши продукты',
-            text: 'Стремление к высокому качеству выполнения работы своевременная трансформация бизнес-процессов позволяют нам быть надежным партнером, а следование принципам устойчивого развития позволяет вносить вклад в поддержание общемировых ценностей.',
+        section1: {
             img: {
                 src: img,
                 alt: 'Наши продукты'
-            }
-        }, {
+            },
+            title: 'Наши продукты',
+            text: 'Стремление к высокому качеству выполнения работы своевременная трансформация бизнес-процессов позволяют нам быть надежным партнером, а следование принципам устойчивого развития позволяет вносить вклад в поддержание общемировых ценностей.',
+        },
+        section2: {
             title: 'Big Data Bridge',
             text: 'BIG DATA BRIDGE представляет собой SaaS-сервис, поэтому распространяется в виде интернет-решения и не требует установки.',
             btn1: {
@@ -80,7 +85,8 @@ export const data: IProductsPageData = {
                 alt: '',
                 title: '',
             },]
-        }, {
+        },
+        section3: {
             title: 'Библиотеки, скрипты, технологический стек, которые использовали при создании программы:',
             list: [
                 {title: 'React JS'},
@@ -90,7 +96,8 @@ export const data: IProductsPageData = {
                 {title: 'Express'},
                 {title: 'PostgreSQL JSON'},
             ]
-        }, {
+        },
+        section4: {
             title: 'Документы',
             documents: [{
                 title: 'Документ 1',
@@ -141,6 +148,6 @@ export const data: IProductsPageData = {
                     alt: ''
                 }
             }]
-        }]
+        }
     }
 }
