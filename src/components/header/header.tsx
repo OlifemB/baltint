@@ -26,27 +26,27 @@ const Header = () => {
     
     return (
         <header className={'bg-[#050624]/80 shadow-xl fixed left-0 top-0 right-0 z-50 backdrop-blur-2xl'}>
-            <div className={'flex flex-row flex-1 justify-between align-center container mx-auto py-4 px-4 md:px-0 relative'}>
+            <div className={'flex flex-row flex-1 justify-between align-center container mx-auto py-6 px-4 md:px-0'}>
                 <Link
                     replace={true}
                     href={'/'}
-                    className={clsx('font-bold text-xl lg:text-2xl hover:text-white duration-300 uppercase tracking-wide', pathname === '/' ? 'text-gray-100' : 'text-gray-200')}
+                    className={clsx('font-bold text-xl lg:text-2xl text-white duration-300 uppercase tracking-wide')}
                 >
-                    <Logo className={'h-6'}/>
+                    <Logo className={' h-4 md:h-6'}/>
                 </Link>
                 
                 <nav
                     id={'desktop-menu'}
-                    className={'hidden lg:flex flex-row gap-6 h-max'}
+                    className={'hidden lg:flex flex-row gap-8 h-max'}
                 >
                     {componentData.nav.map((item, index) =>
-                        <div className={'relative'} key={item.title + item.link + index}>
+                        <div key={item.title + item.link + index}>
                             <Link
                                 replace={true}
                                 href={item.link}
-                                className={clsx('font-normal hover:text-gray-100  duration-300', item.id === pathname.slice(1) ? 'text-white' : 'text-gray-300 ')}
+                                className={clsx('font-normal hover:text-gray-100  duration-300', item.id === pathname.slice(1) || item.id === '/' ? 'text-white' : 'text-gray-300 ')}
                             >
-                                <a>{item.title}</a>
+                                {item.title}
                             </Link>
                         </div>
                     )}
@@ -55,17 +55,17 @@ const Header = () => {
                 {/*   MOBILE =================================================== */}
                 <nav
                     id={'mobile-menu'}
-                    className={clsx('fixed left-0 top-0 w-full h-0 0 bg-gray-800 overflow-hidden left-0 right-0 flex  flex-1 w-full flex-col justify-center items-start gap-2 md:hidden duration-300', isOpen ? 'h-full' : 'h-0')}
+                    className={clsx('fixed left-0 top-0 left-0 w-full bg-gray-800 overflow-hidden  flex  flex-1 w-full flex-col justify-center items-start gap-2 md:hidden duration-300', isOpen ? 'h-screen' : 'h-0')}
                 >
                     {componentData.nav.map((item, index) =>
-                        <div className={'relative px-8 flex flex-col gap-8'}
+                        <div className={'px-8 flex flex-col gap-8'}
                              key={item.title + item.link + index} onClick={toggleMenuHandler}>
                             <Link
                                 replace
                                 href={item.link}
                                 className={clsx('font-normal hover:text-gray-100  duration-300 text-3xl', item.id === pathname.slice(1) ? 'text-gray-100 font-bold' : 'text-gray-400 ')}
                             >
-                                <a>{item.title}</a>
+                                {item.title}
                             </Link>
                         </div>
                     )}

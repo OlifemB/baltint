@@ -10,22 +10,14 @@ const ContactsPage = () => {
     const pageData = data[lang as keyof IContactsPageData]
 
     return (
-        <>
-            <section className={'flex flex-1'}>
-                <div className={'flex flex-col md:flex-row container mx-auto px-4 lg:px-0 gap-8 py-16 lg:py-32'}>
-                    <div className={'flex flex-col flex-1 items-start justify-center gap-8'}>
-                        <Image
-                            className={'w-full h-auto scale-125'}
-                            src={pageData.header.img.src}
-                            alt={pageData.header.img.alt}
-                        />
-                    </div>
-
+        <main className={'flex flex-col flex-1 flex-14 gap-24 md:gap-32 py-20 md:py-40'}>
+            <section className={'flex flex-col flex-1 items-center justify-center'}>
+                <div className={'flex flex-col md:flex-row container mx-auto px-4 md:px-0 gap-8'}>
                     <div className={'flex flex-col flex-1 justify-center items-start gap-8'}>
                         <h1 className={'text-6xl font-bold'}>
                             {pageData.header.title}
                         </h1>
-
+        
                         <div className={'flex flex-col gap-4'}>
                             {pageData.header.rows.map((row, index) =>
                                 <div
@@ -38,9 +30,18 @@ const ContactsPage = () => {
                             )}
                         </div>
                     </div>
+                    
+                    
+                    <div className={'flex flex-col flex-1 items-start justify-center gap-2'}>
+                        <Image
+                            className={'w-full h-auto scale-125'}
+                            src={pageData.header.img.src}
+                            alt={pageData.header.img.alt}
+                        />
+                    </div>
                 </div>
             </section>
-        </>
+        </main>
     );
 };
 

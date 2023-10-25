@@ -6,6 +6,7 @@ import {Header} from "@/components/header";
 import {Footer} from "@/components/footer";
 import '@/assets/styles/main.scss'
 
+
 export const metadata: Metadata = {
     title: "Baltic Integration Group",
     description: "Baltic Integration Group",
@@ -14,13 +15,11 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: { children: React.ReactNode }) {
     return (
         <html lang="en">
-        <body className={'min-h-max'}>
+        <body>
         <ReduxProvider>
-            <main className={'flex-1 flex flex-col pt-16 min-h-max'}>
-                {children}
-            </main>
-            <Footer/>
             <Header/>
+            {children}
+            <Footer/>
         </ReduxProvider>
         </body>
         </html>

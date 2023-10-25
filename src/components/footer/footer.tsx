@@ -12,7 +12,7 @@ const Footer = () => {
     return (
         <footer className={'bg-gray-800'}>
             <div className={'flex flex-col flex-1 container mx-auto px-4 md:px-0'}>
-                <div className={'flex flex-1 flex-col md:flex-row flex-1 justify-between items-stretch py-8 gap-6'}>
+                <div className={'flex flex-1 flex-col md:flex-row flex-1 justify-between items-stretch py-8  gap-2 md:gap-8'}>
                     <div className={'flex flex-1 flex-col gap-2'}>
                         {componentData.col1.map((item, index) =>
                             <div
@@ -28,7 +28,7 @@ const Footer = () => {
                         {componentData.col2.map((item, index) =>
                             <div
                                 key={item.text + index}
-                                className={'text-gray-300'}
+                                className={'transition ease-in-out opacity-90 hover:opacity-100 text-gray-300'}
                             >
                                 {item.text}
                             </div>

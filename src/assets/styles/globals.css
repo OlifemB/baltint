@@ -27,6 +27,8 @@ body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    position: relative;
+    font-family: Roboto, serif;
 }
 
 .container{

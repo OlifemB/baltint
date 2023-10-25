@@ -1,5 +1,6 @@
 import Logo from '@/assets/vectors/logo.svg'
 
+
 export interface IHeaderData {
     ru: {
         nav: {
@@ -14,24 +15,28 @@ export interface IHeaderData {
 export const data: IHeaderData = {
     ru: {
         nav: [{
-            id:'about',
+            id: 'main',
+            link: '/',
+            title: 'Главная'
+        }, {
+            id: 'about',
             title: 'О компании',
             link: '/about'
         },
-        //     {
-        //     id: 'progress',
-        //     title: 'Устойчивое развитие',
-        //     link: '/progress'
-        // },
+            //     {
+            //     id: 'progress',
+            //     title: 'Устойчивое развитие',
+            //     link: '/progress'
+            // },
             {
-            id: 'products',
-            title: 'Продукты',
-            link: '/products'
-        }, {
-            id: 'contacts',
-            title: 'Контакты',
-            link: '/contacts'
-        }],
+                id: 'products',
+                title: 'Продукты',
+                link: '/products'
+            }, {
+                id: 'contacts',
+                title: 'Контакты',
+                link: '/contacts'
+            }],
         logo: Logo
     }
 }
