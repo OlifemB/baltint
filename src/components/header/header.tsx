@@ -25,9 +25,10 @@ const Header = () => {
     }
     
     return (
-        <header className={'bg-primary shadow-xl fixed left-0 top-0 right-0 z-50'}>
+        <header className={'bg-[#1B1C3B] shadow-xl fixed left-0 top-0 right-0 z-50 backdrop-blur-2xl'}>
             <div className={'flex flex-row flex-1 justify-between align-center container mx-auto py-4 px-4 md:px-0 relative'}>
                 <Link
+                    replace
                     href={'/'}
                     className={clsx('font-bold text-xl lg:text-2xl flex-1 hover:text-gray-100 duration-300 uppercase tracking-wide', pathname === '/' ? 'text-gray-100' : 'text-gray-400')}
                 >
@@ -41,6 +42,7 @@ const Header = () => {
                     {componentData.nav.map((item, index) =>
                         <div className={'relative'} key={item.title + item.link + index}>
                             <Link
+                                replace
                                 href={item.link}
                                 className={clsx('font-normal hover:text-gray-100  duration-300', item.id === pathname.slice(1) ? 'text-gray-100 font-bold' : 'text-gray-400 ')}
                             >

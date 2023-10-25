@@ -16,11 +16,11 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
         <html lang="en">
         <body className={'min-h-max'}>
         <ReduxProvider>
-            <Header/>
             <main className={'flex-1 flex flex-col pt-16 min-h-max'}>
                 {children}
             </main>
             <Footer/>
+            <Header/>
         </ReduxProvider>
         </body>
         </html>

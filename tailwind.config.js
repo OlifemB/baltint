@@ -20,7 +20,7 @@ module.exports = {
         lg: '984px',
         xl: '1240px',
       },
-    }
+    },
   },
   plugins: [],
 }
