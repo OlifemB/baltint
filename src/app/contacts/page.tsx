@@ -12,10 +12,10 @@ const ContactsPage = () => {
     return (
         <>
             <section className={'flex flex-1'}>
-                <div className={'flex flex-col md:flex-row container mx-auto px-4 md:px-0 py-40 gap-20'}>
+                <div className={'flex flex-col md:flex-row container mx-auto px-4 lg:px-0 gap-8 py-16 lg:py-32'}>
                     <div className={'flex flex-col flex-1 items-start justify-center gap-8'}>
                         <Image
-                            priority={true}
+                            priority
                             className={'w-full h-auto scale-125'}
                             src={pageData.header.img.src}
                             alt={pageData.header.img.alt}
@@ -34,7 +34,7 @@ const ContactsPage = () => {
                                     key={row.text + row.title + index}
                                 >
                                     <span className={'font-bold text-xl'}>{row.title}</span>
-                                    <span className={' text-xl'}>{row.text}</span>
+                                    <a className={'text-xl opacity-80 hover:opacity-100 transition ease-in-out'} href={row.link}>{row.text}</a>
                                 </div>
                             )}
                         </div>

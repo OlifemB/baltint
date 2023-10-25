@@ -1,3 +1,6 @@
+import {consts} from "@/common/consts";
+
+
 export interface IFooterData {
     ru: {
         copyright: string;
@@ -6,6 +9,7 @@ export interface IFooterData {
         }[]
         col1: {
             text: string
+            link: string
         } []
     }
 }
@@ -13,17 +17,23 @@ export interface IFooterData {
 export const data: IFooterData = {
     ru: {
         col1: [{
-            text: '191028, Санкт-Петербург, пр-кт Литейный, д. 26, литера А',
+            text: consts.address.title,
+            link: consts.address.value,
+            
         }, {
-            text: '8 (999) - 99 - 99',
+            text: consts.phone.title,
+            link: 'tel:' + consts.phone.value,
+            
         }, {
-            text: 'info@baltint.group'
+            text: consts.email.title,
+            link: 'mailto:' + consts.email.value,
+            
         }],
         col2: [{
             text: 'Политика конфиденциальности',
         }, {
             text: 'Публичная оферта',
         }],
-        copyright: 'Baltic Integrational Group @ 2023. Все права защищены.'
+        copyright: `Baltic Integrational Group (c) ${new Date().getFullYear()}. Все права защищены.`
     }
 }

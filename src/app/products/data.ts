@@ -1,67 +1,69 @@
 // import img from '@/assets/images/bg1/2.png'
 import img from '@/assets/images/bg2/2.png'
+import IconTech from '@/assets/icons/pack1/icon-tech.svg'
+import IconLocation from '@/assets/icons/pack1/icon-location.svg'
+import IconGrow from '@/assets/icons/pack1/icon-grow.svg'
 import {StaticImageData} from "next/image";
-
+import {consts} from "@/common/consts";
 
 export interface IProductsPageData {
     ru: {
-        section1: {
+        sections: [{
             img: {
-                src: any;
+                src: StaticImageData
                 alt: string
-            };
-            text: string;
+            }
+            text: string
             title: string
-        };
-        section4: {
+        }, {
+            btn2: {
+                link: string
+                title: string
+            };
+            text: string
+            btn1: {
+                link: string
+                title: string
+            };
+            title: string
+            gallery: {
+                src: string
+                alt: string
+                title: string
+            }[]
+        }, {
+            list: {
+                title: string,
+                list: {
+                    title?: string,
+                    text?: string
+                }[]
+            }[]
+        }, {
             documents: {
                 img: {
-                    src: string;
+                    src: string
                     alt: string
-                };
-                link: string;
-                text: string;
+                }
+                link: string
+                text: string
                 title: string
-            }[];
+            }[]
             title: string
-        };
-        section3: {
-            title: string;
-            list: {
-                title: string
-            }[]
-        };
-        section2: {
-            btn2: {
-                link: string;
-                title: string
-            };
-            text: string;
-            btn1: {
-                link: string;
-                title: string
-            };
-            title: string;
-            gallery: {
-                src: string;
-                alt: string;
-                title: string
-            }[]
-        }
+        }];
     }
 }
 
-export const data:IProductsPageData  = {
+export const data: IProductsPageData = {
     ru: {
-        section1: {
+        sections: [{
+            title: 'Наши продукты',
+            text: 'Стремление к высокому качеству выполнения работы своевременная трансформация бизнес-процессов позволяют нам быть надежным партнером, а следование принципам устойчивого развития позволяет вносить вклад в поддержание общемировых ценностей.',
             img: {
                 src: img,
                 alt: 'Наши продукты'
-            },
-            title: 'Наши продукты',
-            text: 'Стремление к высокому качеству выполнения работы своевременная трансформация бизнес-процессов позволяют нам быть надежным партнером, а следование принципам устойчивого развития позволяет вносить вклад в поддержание общемировых ценностей.',
-        },
-        section2: {
+            }
+        }, {
             title: 'Big Data Bridge',
             text: 'BIG DATA BRIDGE представляет собой SaaS-сервис, поэтому распространяется в виде интернет-решения и не требует установки.',
             btn1: {
@@ -85,19 +87,46 @@ export const data:IProductsPageData  = {
                 alt: '',
                 title: '',
             },]
-        },
-        section3: {
-            title: 'Библиотеки, скрипты, технологический стек, которые использовали при создании программы:',
-            list: [
-                {title: 'React JS'},
-                {title: 'MobX, MobX-State-Tree '},
-                {title: 'WebSocket'},
-                {title: 'Node JS'},
-                {title: 'Express'},
-                {title: 'PostgreSQL JSON'},
-            ]
-        },
-        section4: {
+        }, {
+            list: [{
+                title: 'Основные компоненты технологического стека BIG DATA BRIDGE:',
+                list: [
+                    {title: 'React JS'},
+                    {title: 'MobX'},
+                    {title: 'WebSocket'},
+                    {title: 'Node JS'},
+                    {title: 'Express'},
+                    {title: 'PostgreSQL'},
+                ]
+            }, {
+                title: 'Служба технической поддержки:',
+                list: [{
+                    title: 'Время работы службы технической поддержки:\n',
+                    text: 'Понедельник – пятница с 09.00 – 17.30',
+                }, {
+                    title: 'Почтовый адрес для направления запросов\n',
+                    text: consts.address.title,
+                }, {
+                    title: 'Телефон:',
+                    text: consts.phone.title,
+                }, {
+                    title: 'Email:',
+                    text: consts.email.title,
+                }, {
+                    title: '',
+                    text: 'Служба технической поддержки поможет в обновлении продукта, помогут устранить сбои при использовании Продукта',
+                },]
+            }, {
+                title: 'Стоимость продукта рассчитывается индивидуально',
+                list: [{
+                    text: 'Цена на продукт определяется в зависимости от рабочих мест (пользователей) которым необходимо обеспечить доступ. Также индивидуально делается предложение исходя из оборота компании. ',
+                }, {
+                    text: 'Продукт не возможно использовать безвозмездно.'
+                }, {
+                    text: 'Продукт продается свободно на территории Российской Федерации.',
+                }]
+            }]
+        }, {
             title: 'Документы',
             documents: [{
                 title: 'Документ 1',
@@ -148,6 +177,6 @@ export const data:IProductsPageData  = {
                     alt: ''
                 }
             }]
-        }
+        }]
     }
 }

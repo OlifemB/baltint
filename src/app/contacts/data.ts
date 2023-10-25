@@ -1,6 +1,8 @@
 // import img from '@/assets/images/bg1/4.png'
 import img from '@/assets/images/bg2/4.png'
 import {StaticImageData} from "next/image";
+import {consts} from "@/common/consts";
+
 
 export interface IContactsPageData {
     ru: {
@@ -13,6 +15,7 @@ export interface IContactsPageData {
             rows: {
                 text: string
                 title: string
+                link: string
             } []
         }
     }
@@ -28,13 +31,17 @@ export const data: IContactsPageData = {
             title: 'Контакты',
             rows: [{
                 title: 'Адрес:',
-                text: '191028, Санкт-Петербург, пр-кт Литейный, д. 26, литера А'
+                text: consts.address.title,
+                link: consts.address.value,
             }, {
                 title: 'Телефон:',
-                text: '8 (999) - 99 - 99'
+                text: consts.phone.title,
+                link: 'tel:' + consts.phone.value,
             }, {
-                title: 'Email:',
-                text: 'info@baltint.group'
+                title: 'Email',
+                text: consts.email.title,
+                link: 'mailto:' + consts.email.value,
+                
             }]
         }
     }

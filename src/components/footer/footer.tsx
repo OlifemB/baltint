@@ -19,12 +19,12 @@ const Footer = () => {
                                 key={item.text+index}
                                 className={'text-gray-300'}
                             >
-                                {item.text}
+                                <a href={item.link} className={'transition ease-in-out opacity-90 hover:opacity-100'}>{item.text}</a>
                             </div>
                         )}
                     </div>
 
-                    <div className={'flex flex-1 flex-col gap-2'}>
+                    <div className={'flex flex-1 flex-col gap-2 items-start md:items-end'}>
                         {componentData.col2.map((item, index) =>
                             <div
                                 key={item.text + index}

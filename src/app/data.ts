@@ -1,4 +1,3 @@
-// import img from '@/assets/images/bg1/1.png'
 import img from '@/assets/images/bg2/1.png'
 import {StaticImageData} from "next/image";
 
@@ -28,10 +27,10 @@ export const data:IHomePageData = {
         sections: [{
             img: {
                 src: img,
-                alt: 'Baltic Integrational Group'
+                alt: 'Baltic International Group'
             },
-            title: 'Baltic Integrational Group',
-            text: 'Мы – IT компания, готовим современные и гибкие решения для строительных и сервисных компаний.',
+            title: 'Baltic International Group',
+            text: 'Мы – IT компания, которая проектирует, разрабатывает и внедряет современные информационные системы, продукты, платформы для крупных строительных и сервисных компаний.',
             btn1: {
                 title: 'Наши продукты',
                 link: '/products'
