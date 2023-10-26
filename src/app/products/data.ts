@@ -67,11 +67,11 @@ export const data: IProductsPageData = {
             title: 'Big Data Bridge',
             text: 'BIG DATA BRIDGE представляет собой SaaS-сервис, поэтому распространяется в виде интернет-решения и не требует установки.',
             btn1: {
-                title: 'Рассчёт стоимости для Вас',
+                title: 'Расчёт стоимости для Вас',
                 link: ''
             },
             btn2: {
-                title: 'Связатся с техподдержкой',
+                title: 'Связатсья с техподдержкой',
                 link: ''
             },
             gallery: [{

@@ -20,7 +20,7 @@ const ProductsPage = () => {
                 <div className={'flex flex-col md:flex-row container mx-auto px-4 lg:px-0 gap-8 py-4 md:py-16'}>
                     <div className={'flex flex-col flex-1 items-start justify-center gap-8'}>
                         <div className={'flex flex-col justify-start items-start gap-6 max-w-xl'}>
-                            <h1 className={'text-6xl font-bold'}>
+                            <h1 className={'text-6xl font-bold color-primary'}>
                                 {pageData.sections[0].title}
                             </h1>
                             
@@ -47,7 +47,9 @@ const ProductsPage = () => {
                 <div className={'px-4 md:mp-0'}>
                     <div className={'bg-white rounded-2xl shadow-xl container mx-auto divide-y'}>
                         <div className={'flex flex-col items-center justify-center gap-10 mx-auto py-20 md:py-32 px-4'}>
-                            <h2 className={'text-4xl font-bold'}>{pageData.sections[1].title.toUpperCase()}</h2>
+                            <h2 className={'text-4xl font-bold color-primary'}>
+                                {pageData.sections[1].title.toUpperCase()}
+                                </h2>
                             <p className={'max-w-2xl text-center text-xl'}>{pageData.sections[1].text}</p>
                             <div className={'flex flex-col lg:flex-row flex-1 gap-4'}>
                                 <button className={'btn btn-primary'}>
@@ -69,7 +71,7 @@ const ProductsPage = () => {
                                     </div>
                                     
                                     <div className={'flex flex-col gap-4'}>
-                                        <h2 className={'text-2xl font-bold'}>
+                                        <h2 className={'text-2xl font-bold color-primary'}>
                                             {pageData.sections[2].list[0].title}
                                         </h2>
                                         
@@ -92,7 +94,7 @@ const ProductsPage = () => {
                                     </div>
                                     
                                     <div className={'flex flex-col gap-4'}>
-                                        <h2 className={'text-2xl font-bold'}>
+                                        <h2 className={'text-2xl font-bold color-primary'}>
                                             {pageData.sections[2].list[1].title}
                                         </h2>
                                         
@@ -102,7 +104,7 @@ const ProductsPage = () => {
                                                 <div className={'text-lg whitespace-pre-wrap my-3'}
                                                      key={`productsPageList2-${index}`}>
                                                     {item.title &&
-                                                        <span className={'font-semibold'}>{item.title}</span>}
+                                                        <span className={'font-semibold color-primary'}>{item.title}</span>}
                                                     <span className={'whitespace-normal'}>{item.text}</span>
                                                 </div>
                                             )}
@@ -118,7 +120,7 @@ const ProductsPage = () => {
                                     </div>
                                     
                                     <div className={'flex flex-col gap-4'}>
-                                        <h2 className={'text-2xl font-bold'}>
+                                        <h2 className={'text-2xl font-bold color-primary'}>
                                             {pageData.sections[2].list[2].title}
                                         </h2>
                                         

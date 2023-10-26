@@ -15,22 +15,22 @@ const AboutPage = () => {
             <section>
                 <div className={'flex flex-col container mx-auto gap-8 px-4'}>
                     
-                    <h1 className={'text-6xl font-bold'}>
+                    <h1 className={'text-6xl font-bold color-primary'}>
                         {pageData.sections[0].title}
                     </h1>
                     
                     <div className={'flex flex-col md:flex-row gap-8'}>
                         <div className={'flex flex-col gap-6 flex-1'}>
                             {pageData.sections[0].list.map((item, index) =>
-                                <p className={'text-lg'} key={`aboutPageList${index}`}>
+                                <p className={'text-lg'} key={`aboutPageList1-${index}`}>
                                     {item.text}
                                 </p>
                             )}
                         </div>
                         
                         <div className={'flex flex-col gap-6 flex-1'}>
-                            {pageData.sections[1].list.map(item =>
-                                <p className={'text-lg'}>
+                            {pageData.sections[1].list.map((item, index) =>
+                                <p className={'text-lg'} key={`aboutPageList2-${index}`}>
                                     {item.text}
                                 </p>
                             )}
@@ -55,7 +55,7 @@ const AboutPage = () => {
                 <div className={'px-4'}>
                     <div
                         className={'flex flex-col items-center justify-center container mx-auto gap-16 pt-20 pb-12 px-4 bg-white rounded-2xl shadow-md'}>
-                        <h2 className={'text-4xl font-bold'}>
+                        <h2 className={'text-4xl font-bold color-primary'}>
                             {pageData.sections[2].title}
                         </h2>
                         
@@ -95,10 +95,12 @@ const AboutPage = () => {
                             
                             <div className={'flex flex-col flex-1 items-start justify-center gap-8'}>
                                 <div className={'flex flex-col justify-start items-start gap-4 max-w-xl'}>
-                                    <h2 className={'text-4xl font-bold'}>{pageData.sections[3].title}</h2>
+                                    <h2 className={'text-4xl font-bold color-primary'}>
+                                        {pageData.sections[3].title}
+                                        </h2>
                                     <div className={'flex flex-col  gap-6'}>
-                                        {pageData.sections[3].list.map(item =>
-                                            <p className={'text-lg '}>
+                                        {pageData.sections[3].list.map((item, index) =>
+                                            <p className={'text-lg '} key={`aboutPageList3-${index}`}>
                                                 {item.title}
                                             </p>
                                         )}

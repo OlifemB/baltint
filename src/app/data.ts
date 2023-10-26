@@ -37,7 +37,7 @@ export const data:IHomePageData = {
                 link: '/products'
             },
             btn2: {
-                title: 'Связатся с нами',
+                title: 'Связаться с нами',
                 link: '/contacts'
             }
         }]

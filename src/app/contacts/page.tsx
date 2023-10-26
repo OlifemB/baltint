@@ -14,7 +14,7 @@ const ContactsPage = () => {
             <section className={'flex flex-col flex-1 items-center justify-center'}>
                 <div className={'flex flex-col md:flex-row container mx-auto px-4 md:px-0 gap-8'}>
                     <div className={'flex flex-col flex-1 justify-center items-start gap-8'}>
-                        <h1 className={'text-6xl font-bold'}>
+                        <h1 className={'text-6xl font-bold color-primary color-primary'}>
                             {pageData.header.title}
                         </h1>
         
@@ -24,7 +24,7 @@ const ContactsPage = () => {
                                     className={'flex flex-col'}
                                     key={row.text + row.title + index}
                                 >
-                                    <span className={'font-bold text-xl'}>{row.title}</span>
+                                    <span className={'font-bold text-xl color-primary'}>{row.title}</span>
                                     <a className={'text-xl opacity-80 hover:opacity-100 transition ease-in-out'} href={row.link}>{row.text}</a>
                                 </div>
                             )}

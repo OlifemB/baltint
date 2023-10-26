@@ -16,7 +16,7 @@ const ProgressPage = () => {
                 <div className={'flex flex-col md:flex-row container mx-auto px-4 md:px-0 py-40'}>
                     <div className={'flex flex-col flex-1 items-start justify-center gap-8'}>
                         <div className={'flex flex-col justify-start items-start gap-6 max-w-xl'}>
-                            <h1 className={'text-6xl font-bold'}>
+                            <h1 className={'text-6xl font-bold color-primary'}>
                                 {pageData.sections[0].title}
                             </h1>
                             

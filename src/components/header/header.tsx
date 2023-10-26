@@ -18,7 +18,6 @@ const Header = () => {
     const componentData = data[lang as keyof IHeaderData]
     const pathname = usePathname()
     const [isOpen, setIsOpen] = useState(false)
-    const matches = useMediaQuery('(max-width: 768px)')
     
     const toggleMenuHandler = () => {
         setIsOpen(!isOpen)
