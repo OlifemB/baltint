@@ -11,8 +11,8 @@ const Vacancies = () => {
     const [currentVacancy, setCurrentVacancy] = useState('')
 
     const openModalHandler = (id:string) => {
-        toggle()
         setCurrentVacancy(id)
+        toggle()
     }
 
     return (
