@@ -6,14 +6,14 @@ import {ReactNode} from "@/common/types";
 import IconClose from '@/assets/icons/pack2/icon-close.svg'
 import {Dispatch} from "redux";
 
-export interface IModal {
-    children: ReactNode,
-    isActive: Dispatch<SetStateAction<boolean>>,
-    title: string,
-    handleClose: Function
-}
+// export interface IModal {
+//     children: ReactNode,
+//     isActive: Dispatch<SetStateAction<boolean>>,
+//     title: string,
+//     handleClose: Function
+// }
 
-const Modal: React.FC<IModal> = ({children,isActive,  title, handleClose}) => {
+const Modal = ({children, isActive, title, handleClose}) => {
 
     return (
         <div
