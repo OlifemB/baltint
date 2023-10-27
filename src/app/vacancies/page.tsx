@@ -7,7 +7,7 @@ import {useModal} from "@/components/modal/useModal";
 import {dataModal, dataPage} from "@/app/vacancies/data";
 
 const Vacancies = () => {
-    const [modalOpen, setModalOpen, toggle] = useModal()
+    const [modalOpen, setModalOpen, toggle] = useModal(false)
     const [currentVacancy, setCurrentVacancy] = useState('')
 
     const openModalHandler = (id:string) => {

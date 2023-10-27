@@ -25,7 +25,7 @@ const ContactsPage = () => {
                                     key={row.text + row.title + index}
                                 >
                                     <span className={'font-bold text-xl color-primary'}>{row.title}</span>
-                                    <a className={'text-xl opacity-80 hover:opacity-100 transition ease-in-out'} href={row.link}>{row.text}</a>
+                                    <a className={'text-xl  transition ease-in-out'} href={row.link}>{row.text}</a>
                                 </div>
                             )}
                         </div>
@@ -34,7 +34,7 @@ const ContactsPage = () => {
                     
                     <div className={'flex flex-col flex-1 items-start justify-center gap-2'}>
                         <Image
-                            className={'w-full h-auto scale-125'}
+                            className={''}
                             src={pageData.header.img.src}
                             alt={pageData.header.img.alt}
                         />

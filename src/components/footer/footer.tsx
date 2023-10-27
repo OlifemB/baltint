@@ -19,7 +19,7 @@ const Footer = () => {
                                 key={item.text+index}
                                 className={'text-gray-300'}
                             >
-                                <a href={item.link} className={'transition ease-in-out opacity-90 hover:opacity-100'}>{item.text}</a>
+                                <a href={item.link} className={'transition ease-in-out '}>{item.text}</a>
                             </div>
                         )}
                     </div>
@@ -28,7 +28,7 @@ const Footer = () => {
                         {componentData.col2.map((item, index) =>
                             <div
                                 key={item.text + index}
-                                className={'transition ease-in-out opacity-90 hover:opacity-100 text-gray-300'}
+                                className={'transition ease-in-out text-gray-300'}
                             >
                                 {item.text}
                             </div>

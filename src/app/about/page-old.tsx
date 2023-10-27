@@ -16,7 +16,7 @@ const AboutPage = () => {
                 <div className={'flex flex-col md:flex-row container mx-auto px-4 lg:px-0 gap-8 py-16 lg:py-32'}>
                     <div className={'flex flex-col flex-1 items-center justify-center relative'}>
                         <Image
-                            className={'w-full h-auto scale-125'}
+                            className={'w-full h-auto'}
                             src={pageData.sections[0].img.src}
                             alt={pageData.sections[0].img.alt}
                         />
@@ -56,7 +56,7 @@ const AboutPage = () => {
                     
                     <div className={'flex flex-col flex-1 items-center justify-center relative'}>
                         <Image
-                            className={'w-full h-auto scale-125'}
+                            className={'w-full h-auto'}
                             src={pageData.sections[1].img.src}
                             alt={pageData.sections[1].img.alt}
                         />
@@ -104,9 +104,9 @@ const AboutPage = () => {
                     className={'flex flex-col items-center justify-center mx-auto gap-8 container'}>
                     
                     <div className={'flex flex-col md:flex-row container mx-auto px-4 md:px-0 lg:pb-32 lg:pt-12 gap-4'}>
-                        <div className={'flex flex-col flex-1 items-center justify-center relative'}>
+                        <div className={'flex flex-col flex-1 items-center justify-center'}>
                             <Image
-                                className={'w-full h-auto scale-125'}
+                                className={'w-full h-auto'}
                                 src={pageData.sections[3].img.src}
                                 alt={pageData.sections[3].img.alt}
                             />

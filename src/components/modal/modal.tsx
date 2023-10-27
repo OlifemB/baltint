@@ -26,7 +26,7 @@ const Modal: React.FC<IModal> = ({children,isActive,  title, handleClose}) => {
             <div className="bg-white rounded-xl mx-auto container relative" onClick={e => e.stopPropagation()}>
 
                 <IconClose
-                    className={'absolute right-8 top-8 w-6 h-6 text-black cursor-pointer opacity-80 hover:opacity-100 duration-300'}
+                    className={'absolute right-8 top-8 w-6 h-6 text-black cursor-pointer duration-300'}
                     onClick={handleClose}
                 />
                 {children}

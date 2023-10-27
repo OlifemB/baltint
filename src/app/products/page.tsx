@@ -33,9 +33,9 @@ const ProductsPage = () => {
                         </div>
                     </div>
                     
-                    <div className={'flex flex-col flex-1 items-center justify-center relative'}>
+                    <div className={'flex flex-col flex-1 items-center justify-center'}>
                         <Image
-                            className={'w-full h-auto scale-125'}
+                            className={'w-full h-auto'}
                             src={pageData.sections[0].img.src}
                             alt={pageData.sections[0].img.alt}
                         />
@@ -99,7 +99,7 @@ const ProductsPage = () => {
                                         </h2>
                                         
                                         
-                                        <div className={'flex flex-col relative'}>
+                                        <div className={'flex flex-col'}>
                                             {pageData.sections[2].list[1].list.map((item, index) =>
                                                 <div className={'text-lg whitespace-pre-wrap my-3'}
                                                      key={`productsPageList2-${index}`}>

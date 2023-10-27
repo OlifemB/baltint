@@ -106,11 +106,6 @@ body {
   &-primary {
     background-color: $color-primary;
     color: #eee;
-    opacity: 0.9;
-
-    &:hover {
-      opacity: 1;
-    }
   }
 
   &-outline {
@@ -118,10 +113,5 @@ body {
     outline: 2px solid $color-primary;
     outline-offset: -2px;
     color: $color-primary;
-    opacity: 0.9;
-
-    &:hover {
-      opacity: 1;
-    }
   }
 }

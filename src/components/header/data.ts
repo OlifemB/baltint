@@ -15,7 +15,7 @@ export interface IHeaderData {
 export const data: IHeaderData = {
     ru: {
         nav: [{
-            id: '/',
+            id: 'main',
             link: '/',
             title: 'Главная'
         }, {

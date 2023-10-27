@@ -85,9 +85,9 @@ const AboutPage = () => {
                 <div className={'px-4'}>
                     <div className={'flex flex-col items-center justify-center mx-auto gap-8 container'}>
                         <div className={'flex flex-col md:flex-row gap-4'}>
-                            <div className={'flex flex-col flex-1 items-center justify-center relative'}>
+                            <div className={'flex flex-col flex-1 items-center justify-center'}>
                                 <Image
-                                    className={'w-full h-auto scale-125'}
+                                    className={'w-full h-auto'}
                                     src={pageData.sections[3].img.src}
                                     alt={pageData.sections[3].img.alt}
                                 />
