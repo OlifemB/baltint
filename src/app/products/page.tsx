@@ -3,7 +3,6 @@
 import React from 'react';
 import {data, IProductsPageData} from './data'
 import Image from "next/image";
-import ImageGallery from "react-image-gallery";
 import {useAppSelector} from "@/redux/store";
 import IconTech from '@/assets/icons/pack1/icon-tech.svg'
 import IconLocation from '@/assets/icons/pack1/icon-location.svg'
