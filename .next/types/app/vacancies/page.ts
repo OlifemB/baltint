@@ -1,4 +1,4 @@
-// File: C:\App\baltint\src\app\vacancies\page.tsx
+// File: C:\App\baltint\src\app\vacancies\page.jsx
 import * as entry from '../../../../src/app/vacancies/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

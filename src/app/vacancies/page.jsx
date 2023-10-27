@@ -10,7 +10,7 @@ const Vacancies = () => {
     const [modalOpen, setModalOpen, toggle] = useModal(false)
     const [currentVacancy, setCurrentVacancy] = useState('')
 
-    const openModalHandler = (id:string) => {
+    const openModalHandler = (id) => {
         setCurrentVacancy(id)
         toggle()
     }
