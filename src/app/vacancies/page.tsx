@@ -30,19 +30,21 @@ const Vacancies = () => {
                                     {dataPage.section1.text}
                                 </p>
 
-                                <a href={`mailto:${dataPage.section1.email.link}`} className={'font-bold color-primary opacity-80 hover:opacity-100 duration-300'}>
+                                <a href={`mailto:${dataPage.section1.email.link}`}
+                                   className={'font-bold color-primary  duration-300'}>
                                     {dataPage.section1.email.title}
                                 </a>
                             </div>
                         </div>
 
-                        <div className={'flex flex-1 flex-col mx-auto gap-4 md:gap-6 w-full cursor-pointer'}>
+                        <div
+                            className={'flex flex-1 flex-col mx-auto gap-4 md:gap-6 w-full cursor-pointer justify-center'}>
                             {dataPage.section1.list.map((item, index) =>
                                 <div
                                     id={`modal-${index + 1}`}
-                                    className={'bg-white rounded-md px-4 py-4 flex flex-1 flex-row items-center justify-between group'}
+                                    className={'bg-white rounded-md px-4 py-4 flex flex-row items-center justify-between group'}
                                     key={`vacanciesList1-${index}`}
-                                    onClick={()=>openModalHandler(item.id)}
+                                    onClick={() => openModalHandler(item.id)}
                                 >
                                     <span className={''}>
                                         {item.title}
@@ -50,7 +52,7 @@ const Vacancies = () => {
 
                                     <div className={'w-8'}>
                                         <IconArrow
-                                            className={' -ml-2 -top-4 w-8 text-black duration-300 group-hover:ml-2 opacity-80'}
+                                            className={'-ml-2 -top-4 w-8 text-black duration-300 group-hover:ml-2'}
                                             onClick={toggle}
                                         />
                                     </div>

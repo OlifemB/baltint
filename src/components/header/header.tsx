@@ -24,7 +24,7 @@ const Header = () => {
     }
     
     return (
-        <header className={'bg-[#050624]/80 shadow-xl fixed left-0 top-0 right-0 backdrop-blur-2xl'}>
+        <header className={'bg-[#050624]/80 shadow-xl fixed left-0 top-0 right-0 backdrop-blur-2xl z-100'}>
             <div className={'flex flex-row flex-1 justify-between align-center container mx-auto py-6 px-4 md:px-0'}>
                 <Link
                     replace={true}
