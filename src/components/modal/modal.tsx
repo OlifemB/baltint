@@ -1,13 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import React, {SetStateAction} from "react";
 import {ReactNode} from "@/common/types";
 import IconClose from '@/assets/icons/pack2/icon-close.svg'
+import {Dispatch} from "redux";
 
 export interface IModal {
     children: ReactNode,
-    isActive: boolean,
+    isActive: Dispatch<SetStateAction<boolean>>,
     title: string,
     handleClose: Function
 }

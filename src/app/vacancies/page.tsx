@@ -12,6 +12,7 @@ const Vacancies = () => {
 
     const openModalHandler = (id:string) => {
         setCurrentVacancy(id)
+        toggle()
     }
 
     return (
