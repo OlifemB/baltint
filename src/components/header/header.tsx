@@ -6,8 +6,8 @@ import {data, IHeaderData} from './data'
 import {useAppSelector} from "@/redux/store";
 import {usePathname} from "next/navigation";
 import clsx from "clsx";
-import IconMenu from "@/assets/icons/icon-menu.svg"
-import IconClose from "@/assets/icons/icon-close.svg"
+import IconMenu from "@/assets/icons/pack2/icon-menu.svg"
+import IconClose from "@/assets/icons/pack2/icon-close.svg"
 import {useMediaQuery} from "usehooks-ts";
 import Image from "next/image";
 import Logo from '@/assets/vectors/logo.svg'
@@ -24,7 +24,7 @@ const Header = () => {
     }
     
     return (
-        <header className={'bg-[#050624]/80 shadow-xl fixed left-0 top-0 right-0 z-50 backdrop-blur-2xl'}>
+        <header className={'bg-[#050624]/80 shadow-xl fixed left-0 top-0 right-0 backdrop-blur-2xl'}>
             <div className={'flex flex-row flex-1 justify-between align-center container mx-auto py-6 px-4 md:px-0'}>
                 <Link
                     replace={true}
@@ -54,7 +54,7 @@ const Header = () => {
                 {/*   MOBILE =================================================== */}
                 <nav
                     id={'mobile-menu'}
-                    className={clsx('fixed left-0 top-0 left-0 w-full bg-gray-800 overflow-hidden  flex  flex-1 w-full flex-col justify-center items-start gap-2 md:hidden duration-300', isOpen ? 'h-screen' : 'h-0')}
+                    className={clsx('fixed left-0 top-0 left-0 w-full bg-gray-800 overflow-hidden  flex  flex-1 w-full flex-col justify-center items-start gap-2 md:hidden duration-300 z-100', isOpen ? 'h-screen' : 'h-0')}
                 >
                     {componentData.nav.map((item, index) =>
                         <div className={'px-8 flex flex-col gap-8'}
