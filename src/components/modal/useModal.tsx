@@ -1,4 +1,5 @@
-import {useState} from "react";
+import React, {SetStateAction, useState} from "react";
+import {Dispatch} from "redux";
 
 
 export const useModal = (initialMode = false) => {
