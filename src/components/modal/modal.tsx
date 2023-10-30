@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import React, {MouseEventHandler, SetStateAction} from "react";
+import React, {MouseEventHandler, ReactNode, SetStateAction} from "react";
 import {ReactEl} from "@/common/types";
 import IconClose from '@/assets/icons/pack2/icon-close.svg'
 import {Dispatch} from "redux";
 
 export interface IModal {
-    children: ReactEl,
+    children: ReactNode,
     isActive?: boolean,
     title?: string,
     handleClose?: MouseEventHandler<HTMLDivElement>
