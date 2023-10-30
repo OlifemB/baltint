@@ -8,7 +8,7 @@ import {Dispatch} from "redux";
 
 export interface IModal {
     children: ReactNode,
-    isActive: Dispatch<SetStateAction<boolean>>,
+    isActive: boolean,
     title: string,
     handleClose: Function
 }
