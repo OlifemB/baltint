@@ -8,9 +8,9 @@ import {Dispatch} from "redux";
 
 export interface IModal {
     children: ReactNode,
-    isActive: boolean,
-    title: string,
-    handleClose: Function
+    isActive?: boolean,
+    title?: string,
+    handleClose?: Function
 }
 
 const Modal:React.FC<IModal> = ({children, isActive, title, handleClose}) => {
