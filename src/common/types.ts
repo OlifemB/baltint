@@ -5,4 +5,4 @@ type ReactChild = ReactElement | ReactText;
 
 interface ReactNodeArray extends Array<ReactNode> {}
 type ReactFragment = {} | ReactNodeArray;
-export type ReactEl = ReactChild | ReactFragment | ReactPortal | boolean | null | undefined | {};
+export type ReactEl = ReactChild | ReactNode| ReactFragment | ReactPortal | boolean | null | undefined | {};
