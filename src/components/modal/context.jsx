@@ -1,7 +1,6 @@
 import React from "react";
 import Modal from "./modal";
 import {useModal} from "@/components/modal/useModal";
-import {ReactNode} from "@/common/types";
 
 let ModalContext;
 const {Provider} = (ModalContext = React.createContext({}));
