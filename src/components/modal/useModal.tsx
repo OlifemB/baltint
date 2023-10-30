@@ -2,9 +2,9 @@ import React, {SetStateAction, useState} from "react";
 import {Dispatch} from "redux";
 
 
-export const useModal = (initialMode = false) => {
+export const useModal:(initialMode?: boolean) => [boolean, (value: (((prevState: boolean) => boolean) | boolean)) => void, () => void] = (initialMode = false) => {
     const [modalOpen, setModalOpen] = useState(initialMode)
-    const toggle = () => setModalOpen<boolean | Dispatch<SetStateAction<boolean>>>(!modalOpen)
+    const toggle = () => setModalOpen(!modalOpen)
 
     return [modalOpen, setModalOpen, toggle]
 }
