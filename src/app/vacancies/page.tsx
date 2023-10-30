@@ -8,9 +8,9 @@ import {dataModal, dataPage} from "@/app/vacancies/data";
 
 const Vacancies = () => {
     const [modalOpen, setModalOpen, toggle] = useModal(false)
-    const [currentVacancy, setCurrentVacancy] = useState('')
+    const [currentVacancy, setCurrentVacancy] = useState(0)
 
-    const openModalHandler = (id) => {
+    const openModalHandler = (id:number|null) => {
         setCurrentVacancy(id)
         toggle()
     }
