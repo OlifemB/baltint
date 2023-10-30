@@ -2,13 +2,23 @@
 
 import IconArrow from '@/assets/icons/pack2/icon-arrow2.svg'
 import {SetStateAction, useState} from 'react';
-import Modal from "@/components/modal/modal";
+import Modal, {IModal} from "@/components/modal/modal";
 import {useModal} from "@/components/modal/useModal";
-import {dataModal, dataPage} from "@/app/vacancies/data";
+import {dataModal, dataPage, IVacanciesPageData} from "@/app/vacancies/data";
+import {useAppSelector} from "@/redux/store";
+
+class IVacanciesModalData {
+}
 
 const Vacancies = () => {
     const [modalOpen, setModalOpen, toggle] = useModal(false)
     const [currentVacancy, setCurrentVacancy] = useState('')
+
+    const {lang} = useAppSelector(store => store.appReducer)
+    const pageData = dataPage[lang as keyof IVacanciesPageData]
+
+    const modalData = dataModal[currentVacancy as keyof IVacanciesModalData]
+
 
     const openModalHandler = (id:SetStateAction<string>) => {
         setCurrentVacancy(id)
@@ -23,25 +33,25 @@ const Vacancies = () => {
                         <div className={'flex flex-col flex-1 items-start justify-center gap-8'}>
                             <div className={'flex flex-col justify-start items-start gap-6 max-w-xl'}>
                                 <h1 className={'text-6xl font-bold color-primary'}>
-                                    {dataPage.section1.title}
+                                    {pageData.section1.title}
                                 </h1>
 
                                 <p className={'text-xl'}>
-                                    {dataPage.section1.text}
+                                    {pageData.section1.text}
                                 </p>
 
                                 <a
-                                    href={`mailto:${dataPage.section1.email.link}`}
+                                    href={`mailto:${pageData.section1.email.link}`}
                                     className={'font-bold color-primary duration-300 text-xl'}
                                 >
-                                    {dataPage.section1.email.title}
+                                    {pageData.section1.email.title}
                                 </a>
                             </div>
                         </div>
 
                         <div
                             className={'flex flex-1 flex-col mx-auto gap-4 md:gap-6 w-full cursor-pointer justify-center'}>
-                            {dataPage.section1.list.map((item, index) =>
+                            {pageData.section1.list.map((item, index) =>
                                 <div
                                     id={`modal-${index + 1}`}
                                     className={'bg-white rounded-md px-4 py-4 flex flex-row items-center justify-between group'}
@@ -70,10 +80,10 @@ const Vacancies = () => {
                     <div className={'flex flex-col flex-1 px-8 py-12 gap-8'}>
 
                         <h2 className={'text-4xl flex-1 font-bold color-primary'}>
-                            {dataModal[currentVacancy].title}
+                            {modalData.title}
                         </h2>
 
-                        {dataModal[currentVacancy].list.map((block, blockIndex) =>
+                        {modalData.list.map((block, blockIndex) =>
                             <div className={'flex flex-col gap-3'} key={`block-${blockIndex}`}>
                                 <h3 className={'text-xl font-bold color-primary'}>
                                     {block.title}

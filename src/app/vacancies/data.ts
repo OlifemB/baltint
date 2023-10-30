@@ -1,28 +1,87 @@
-export const dataPage = {
-    section1: {
-        title: 'Ищем таланты',
-        text: 'Наше профессиональная команда планомерно расширяется и сейчас у нас в компании доступны следующие вакансии:',
-        email: {
-            title: 'hr1@baltint.group',
-            link: 'hr1@baltint.group'
+export interface IVacanciesPageData {
+    ru: {
+        section1: {
+            text: string;
+            title: string;
+            list: {
+                id: string;
+                title: string
+            }[];
+            email: {
+                link: string;
+                title: string
+            }
         },
-        list: [{
-            id: 'front',
-            title: 'Фронтенд-разработчик',
-        }, {
-            id: 'test',
-            title: 'Тестировщик',
-        }, {
-            id: 'project',
-            title: 'Проджект-менеджер',
-        }, {
-            id: 'product',
-            title: 'Продукт-менеджер',
-        }]
+        modals?: ''
     }
 }
 
-export const dataModal = {
+export const dataPage: IVacanciesPageData = {
+    ru: {
+        section1: {
+            title: 'Ищем таланты',
+            text: 'Наше профессиональная команда планомерно расширяется и сейчас у нас в компании доступны следующие вакансии:',
+            email: {
+                title: 'hr1@baltint.group',
+                link: 'hr1@baltint.group'
+            },
+            list: [{
+                id: 'front',
+                title: 'Фронтенд-разработчик',
+            }, {
+                id: 'test',
+                title: 'Тестировщик',
+            }, {
+                id: 'project',
+                title: 'Проджект-менеджер',
+            }, {
+                id: 'product',
+                title: 'Продукт-менеджер',
+            }]
+        }
+    }
+}
+
+export interface IVacanciesModalData {
+    product: {
+        title: string,
+        list: {
+            title: string,
+            list: {
+                text: string
+            }[]
+        }[]
+    }
+    test: {
+        title: string,
+        list: {
+            title: string,
+            list: {
+                text: string
+            }[]
+        }[]
+    }
+    project: {
+        title: string,
+        list: {
+            title: string,
+            list: {
+                text: string
+            }[]
+        }[]
+    }
+    front: {
+        title: string,
+        list: {
+            title: string,
+            list: {
+                text: string
+            }[]
+        }[]
+    }
+}
+
+export const dataModal: IVacanciesModalData = {
     front: {
         title: 'Фронтенд-разработчик',
         list: [{
