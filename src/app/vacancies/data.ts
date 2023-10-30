@@ -44,36 +44,36 @@ export const dataPage: IVacanciesPageData = {
 
 export interface IVacanciesModalData {
     product: {
-        title: string,
+        title?: string,
         list: {
-            title: string,
+            title?: string,
             list: {
                 text: string
             }[]
         }[]
     }
-    test: {
+    test?: {
         title: string,
-        list: {
-            title: string,
+        list?: {
+            title?: string,
             list: {
                 text: string
             }[]
         }[]
     }
     project: {
-        title: string,
+        title?: string,
         list: {
-            title: string,
+            title?: string,
             list: {
                 text: string
             }[]
         }[]
     }
     front: {
-        title: string,
+        title?: string,
         list: {
-            title: string,
+            title?: string,
             list: {
                 text: string
             }[]
