@@ -4,7 +4,7 @@ import {Dispatch} from "redux";
 
 export const useModal = (initialMode = false) => {
     const [modalOpen, setModalOpen] = useState(initialMode)
-    const toggle = () => setModalOpen(!modalOpen)
+    const toggle = () => setModalOpen<boolean | Dispatch<SetStateAction<boolean>>>(!modalOpen)
 
     return [modalOpen, setModalOpen, toggle]
 }
