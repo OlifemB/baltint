@@ -1,7 +1,7 @@
 'use client'
 
 import IconArrow from '@/assets/icons/pack2/icon-arrow2.svg'
-import {useState} from 'react';
+import {SetStateAction, useState} from 'react';
 import Modal from "@/components/modal/modal";
 import {useModal} from "@/components/modal/useModal";
 import {dataModal, dataPage} from "@/app/vacancies/data";
@@ -10,7 +10,7 @@ const Vacancies = () => {
     const [modalOpen, setModalOpen, toggle] = useModal(false)
     const [currentVacancy, setCurrentVacancy] = useState(0)
 
-    const openModalHandler = (id:number|null) => {
+    const openModalHandler = (id:SetStateAction<number>) => {
         setCurrentVacancy(id)
         toggle()
     }
