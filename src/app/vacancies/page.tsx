@@ -80,7 +80,7 @@ const Vacancies = () => {
                     <div className={'flex flex-col flex-1 px-8 py-12 gap-8'}>
 
                         <h2 className={'text-4xl flex-1 font-bold color-primary'}>
-                            {modalData.title}
+                            {modalData?.title}
                         </h2>
 
                         {modalData.list.map((block, blockIndex) =>
