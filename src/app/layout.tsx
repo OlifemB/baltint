@@ -1,6 +1,6 @@
 import {ReduxProvider} from "@/redux/provider";
 import "../assets/styles/globals.css";
-import React from "react";
+import React, {ReactNode} from "react";
 import {Metadata} from "next";
 import {Header} from "@/components/header";
 import {Footer} from "@/components/footer";
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: "Baltic Integration Group",
 }
 
-export default function RootLayout({children}: { children: ReactEl }) {
+export default function RootLayout({children}: { children: ReactNode }) {
     return (
         <html lang="en">
         <body>

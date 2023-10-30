@@ -2,9 +2,9 @@
 
 import { store } from "./store";
 import { Provider } from "react-redux";
-import React from "react";
+import React, {ReactNode} from "react";
 import {ReactEl} from "@/common/types";
 
-export function ReduxProvider({ children }: { children: ReactEl }) {
+export function ReduxProvider({ children }: { children: ReactNode }) {
   return <Provider store={store}>{children}</Provider>;
 }
