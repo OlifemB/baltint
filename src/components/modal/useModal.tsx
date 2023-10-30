@@ -10,19 +10,19 @@ export const useModal:(initialMode?: boolean) => [boolean, (value: (((prevState:
 }
 
 
-export const useModalWithData = (
-    initialMode = false,
-    initialSelected = null
-) => {
-    const [modalOpen, setModalOpen] = useModal(initialMode)
-    const [selected, setSelected] = useState(initialSelected)
-
-    const setModalState = state => {
-        setModalOpen(state)
-        if (state === false) {
-            setSelected(null)
-        }
-    }
-
-    return {modalOpen, setModalOpen, selected, setSelected, setModalState}
-}
+// export const useModalWithData = (
+//     initialMode = false,
+//     initialSelected = null
+// ) => {
+//     const [modalOpen, setModalOpen] = useModal(initialMode)
+//     const [selected, setSelected] = useState(initialSelected)
+//
+//     const setModalState = (state:boolean) => {
+//         setModalOpen(state)
+//         if (!state) {
+//             setSelected(null)
+//         }
+//     }
+//
+//     return {modalOpen, setModalOpen, selected, setSelected, setModalState}
+// }
