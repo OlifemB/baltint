@@ -26,12 +26,14 @@ const Vacancies = () => {
                                     {dataPage.section1.title}
                                 </h1>
 
-                                <p className={'text-lg'}>
+                                <p className={'text-xl'}>
                                     {dataPage.section1.text}
                                 </p>
 
-                                <a href={`mailto:${dataPage.section1.email.link}`}
-                                   className={'font-bold color-primary  duration-300'}>
+                                <a
+                                    href={`mailto:${dataPage.section1.email.link}`}
+                                    className={'font-bold color-primary duration-300 text-xl'}
+                                >
                                     {dataPage.section1.email.title}
                                 </a>
                             </div>

@@ -23,7 +23,7 @@ const ProductsPage = () => {
                                 {pageData.sections[0].title}
                             </h1>
                             
-                            <p className={'text-lg'}>
+                            <p className={'text-xl'}>
                                 {pageData.sections[0].text}
                             </p>
                         </div>
