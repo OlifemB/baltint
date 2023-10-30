@@ -1,14 +1,12 @@
 'use client'
 
 import IconArrow from '@/assets/icons/pack2/icon-arrow2.svg'
-import {SetStateAction, useState} from 'react';
+import {SetStateAction, useEffect, useState} from 'react';
 import Modal, {IModal} from "@/components/modal/modal";
 import {useModal} from "@/components/modal/useModal";
-import {dataModal, dataPage, IVacanciesPageData} from "@/app/vacancies/data";
+import {dataModal, dataPage, IVacanciesModalData, IVacanciesPageData} from "@/app/vacancies/data";
 import {useAppSelector} from "@/redux/store";
 
-class IVacanciesModalData {
-}
 
 const Vacancies = () => {
     const [modalOpen, setModalOpen, toggle] = useModal(false)
@@ -80,7 +78,7 @@ const Vacancies = () => {
                     <div className={'flex flex-col flex-1 px-8 py-12 gap-8'}>
 
                         <h2 className={'text-4xl flex-1 font-bold color-primary'}>
-                            {modalData?.title}
+                            {modalData.title}
                         </h2>
 
                         {modalData.list.map((block, blockIndex) =>

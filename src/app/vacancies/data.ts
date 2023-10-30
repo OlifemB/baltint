@@ -12,7 +12,6 @@ export interface IVacanciesPageData {
                 title: string
             }
         },
-        modals?: ''
     }
 }
 
