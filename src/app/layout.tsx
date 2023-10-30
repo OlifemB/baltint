@@ -5,6 +5,7 @@ import {Metadata} from "next";
 import {Header} from "@/components/header";
 import {Footer} from "@/components/footer";
 import '@/assets/styles/main.scss'
+import {ReactEl} from "@/common/types";
 
 
 export const metadata: Metadata = {
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     description: "Baltic Integration Group",
 }
 
-export default function RootLayout({children}: { children: React.ReactNode }) {
+export default function RootLayout({children}: { children: ReactEl }) {
     return (
         <html lang="en">
         <body>

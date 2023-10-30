@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import React, {MouseEventHandler, SetStateAction} from "react";
-import {ReactNode} from "@/common/types";
+import {ReactEl} from "@/common/types";
 import IconClose from '@/assets/icons/pack2/icon-close.svg'
 import {Dispatch} from "redux";
 
 export interface IModal {
-    children: ReactNode,
+    children: ReactEl,
     isActive?: boolean,
     title?: string,
     handleClose?: MouseEventHandler<HTMLDivElement>
