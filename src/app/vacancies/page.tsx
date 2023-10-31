@@ -43,6 +43,7 @@ const Vacancies = () => {
                                     <a
                                         href={`mailto:${pageData.section1.email.link}`}
                                         className={'font-bold color-primary duration-300'}
+                                        target="_blank"
                                     >
                                         {pageData.section1.email.title}
                                     </a>

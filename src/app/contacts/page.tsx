@@ -25,7 +25,7 @@ const ContactsPage = () => {
                                     key={row.text + row.title + index}
                                 >
                                     <span className={'font-bold text-xl color-primary'}>{row.title}</span>
-                                    <a className={'text-xl transition ease-in-out'} href={row.link}>{row.text}</a>
+                                    <a className={'text-xl transition ease-in-out'} href={row.link} target="_blank">{row.text}</a>
                                 </div>
                             )}
                         </div>

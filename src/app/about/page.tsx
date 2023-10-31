@@ -19,18 +19,18 @@ const AboutPage = () => {
                         {pageData.sections[0].title}
                     </h1>
                     
-                    <div className={'flex flex-col md:flex-row gap-8'}>
-                        <div className={'flex flex-col gap-6 flex-1'}>
+                    <div className={'flex flex-col md:flex-row gap-12'}>
+                        <div className={'flex flex-col gap-8 flex-1'}>
                             {pageData.sections[0].list.map((item, index) =>
-                                <p className={'text-xl'} key={`aboutPageList1-${index}`}>
+                                <p className={'text-xl text-justify'} key={`aboutPageList1-${index}`}>
                                     {item.text}
                                 </p>
                             )}
                         </div>
                         
-                        <div className={'flex flex-col gap-6 flex-1'}>
+                        <div className={'flex flex-col gap-8 flex-1'}>
                             {pageData.sections[1].list.map((item, index) =>
-                                <p className={'text-xl'} key={`aboutPageList2-${index}`}>
+                                <p className={'text-xl text-justify'} key={`aboutPageList2-${index}`}>
                                     {item.text}
                                 </p>
                             )}

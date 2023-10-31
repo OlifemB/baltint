@@ -19,7 +19,7 @@ const Footer = () => {
                                 key={item.text+index}
                                 className={'text-gray-300'}
                             >
-                                <a href={item.link} className={'transition ease-in-out '}>{item.text}</a>
+                                <a href={item.link} className={'transition ease-in-out '} target="_blank">{item.text}</a>
                             </div>
                         )}
                     </div>

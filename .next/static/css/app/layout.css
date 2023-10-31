@@ -821,6 +821,9 @@ video {
 .gap-8 {
   gap: 2rem;
 }
+.gap-12 {
+  gap: 3rem;
+}
 .divide-y > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-y-reverse: 0;
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
@@ -937,6 +940,9 @@ video {
 }
 .text-center {
   text-align: center;
+}
+.text-justify {
+  text-align: justify;
 }
 .text-2xl {
   font-size: 1.5rem;

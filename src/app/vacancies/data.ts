@@ -6,7 +6,7 @@ export interface IVacanciesPageData {
             list: {
                 id: string;
                 title: string
-            }[];
+            }[]
             email: {
                 text: string;
                 link: string;

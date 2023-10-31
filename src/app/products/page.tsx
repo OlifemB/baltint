@@ -51,12 +51,12 @@ const ProductsPage = () => {
                                 </h2>
                             <p className={'max-w-2xl text-center text-xl'}>{pageData.sections[1].text}</p>
                             <div className={'flex flex-col lg:flex-row flex-1 gap-4'}>
-                                <button className={'btn btn-primary'}>
+                                <a className={'btn btn-primary'} target="_blank">
                                     {pageData.sections[1].btn1.title}
-                                </button>
-                                <button className={'btn btn-outline'}>
+                                </a>
+                                <a className={'btn btn-outline'} href={pageData.sections[1].btn2.link} target="_blank">
                                     {pageData.sections[1].btn2.title}
-                                </button>
+                                </a>
                             </div>
                             {/*<ImageGallery items={[]} />*/}
                         </div>
