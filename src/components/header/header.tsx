@@ -43,7 +43,7 @@ const Header = () => {
                             <Link
                                 replace={true}
                                 href={item.link}
-                                className={clsx('font-normal hover:text-gray-100  duration-300', item.id === pathname.slice(1) ||pathname === '/' && item.id === 'main' ? 'text-white' : 'text-gray-300 ')}
+                                className={clsx('font-normal hover:text-gray-100  duration-300', item.id === pathname.slice(1) ||pathname === '/' && item.id === 'main' ? 'text-white [text-shadow:_0_0_10px_rgb(255_255_255_/_40%)]' : 'text-gray-300 ')}
                             >
                                 {item.title}
                             </Link>
