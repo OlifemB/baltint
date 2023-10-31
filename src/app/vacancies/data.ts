@@ -8,6 +8,7 @@ export interface IVacanciesPageData {
                 title: string
             }[];
             email: {
+                text: string;
                 link: string;
                 title: string
             }
@@ -21,6 +22,7 @@ export const dataPage: IVacanciesPageData = {
             title: 'Ищем таланты',
             text: 'Наше профессиональная команда планомерно расширяется и сейчас у нас в компании доступны следующие вакансии:',
             email: {
+                text: 'Почта для связи:',
                 title: 'hr1@baltint.group',
                 link: 'hr1@baltint.group'
             },

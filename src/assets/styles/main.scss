@@ -1,5 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+::-webkit-scrollbar {
+  width: 8px;
+  position: fixed;
+  left: 0;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3338;
+  border-radius: 2px;
+  transition-duration: .3s;
+
+  &:hover {
+    background: #333c;
+  }
+}
+
+
 $color-primary: #1B1C3B;
 $bp-sm: 640px;
 $bp-md: 768px;
@@ -26,6 +49,7 @@ html {
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  //background-image: url('../../assets/images/background1.png');
   min-width: 100%;
   min-height: 100vh;
   height: 100%;

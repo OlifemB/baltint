@@ -18,7 +18,7 @@ const Modal:React.FC<IModal> = ({children, isActive, title, handleClose}) => {
     return (
         <div
             onClick={handleClose}
-            className={"fixed py-10 px-6 md:py-20 md:px-12 z-10 inset-0 overflow-y-auto backdrop-blur-lg bg-black/50 flex flex-col"}
+            className={"fixed py-10 px-6 md:py-20 md:px-12 z-10 inset-0 overflow-y-auto backdrop-blur-lg bg-[#1B1C3B]/50 flex flex-col"}
             aria-labelledby="modal-title"
             role="dialog"
             aria-modal="true"

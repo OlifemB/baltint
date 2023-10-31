@@ -18,7 +18,7 @@ const Vacancies = () => {
     const modalData = dataModal[currentVacancy as keyof IVacanciesModalData]
 
 
-    const openModalHandler = (id:SetStateAction<string>) => {
+    const openModalHandler = (id: SetStateAction<string>) => {
         setCurrentVacancy(id)
         toggle()
     }
@@ -38,12 +38,15 @@ const Vacancies = () => {
                                     {pageData.section1.text}
                                 </p>
 
-                                <a
-                                    href={`mailto:${pageData.section1.email.link}`}
-                                    className={'font-bold color-primary duration-300 text-xl'}
-                                >
-                                    {pageData.section1.email.title}
-                                </a>
+                                <span className={'text-xl'}>
+                                    {pageData.section1.email.text + '  '}
+                                    <a
+                                        href={`mailto:${pageData.section1.email.link}`}
+                                        className={'font-bold color-primary duration-300'}
+                                    >
+                                        {pageData.section1.email.title}
+                                    </a>
+                                </span>
                             </div>
                         </div>
 

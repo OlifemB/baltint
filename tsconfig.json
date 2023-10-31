@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "outDir": "build",
-    "noEmit": true, // let babel output instead
+    "noEmit": true,
+    // let babel output instead
     "sourceMap": true,
     "target": "es5",
     "lib": [
@@ -21,7 +22,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "types": [
-      "node",
+      "node"
     ],
     "plugins": [
       {

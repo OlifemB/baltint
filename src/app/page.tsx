@@ -13,7 +13,7 @@ function Home() {
 
 
     return (
-        <main className={'flex flex-col flex-1 gap-24 md:gap-32 py-10 md:py-40'}>
+        <main className={'flex flex-col flex-1 gap-24 md:gap-32 py-10 md:py-40 css-doodle'}>
             <section className={'flex flex-col flex-1 items-center justify-center'}>
                 <div className={'flex flex-1 py-4'}>
                     <div className={'flex flex-col md:flex-row container mx-auto px-4 md:px-0 py-16 lg:px-0 gap-8'}>
