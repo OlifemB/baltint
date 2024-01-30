@@ -1,4 +1,4 @@
-FROM nginx:1.17.8-alpine
+FROM nginx:1.24-alpine
 COPY service.conf /etc/nginx/service.conf
 COPY nginx.conf /etc/nginx/nginx.conf
 RUN mkdir -p /etc/nginx/ssl
